@@ -2,7 +2,7 @@ import { Lato } from 'next/font/google'
 import './globals.css'
 import {Providers} from "./providers";
 
-const inter = Lato({ subsets: ['lato'] })
+const inter = Lato({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'KrantiKari Library',
