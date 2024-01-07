@@ -1,6 +1,5 @@
 "use client";
 
-import {Button, Input} from "@nextui-org/react";
 import React from "react";
 import {AiOutlineSearch} from "react-icons/ai";
 
