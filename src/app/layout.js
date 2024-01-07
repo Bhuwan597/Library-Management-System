@@ -1,8 +1,6 @@
-import { Lato } from 'next/font/google'
 import './globals.css'
 import {Providers} from "./providers";
 
-const inter = Lato({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'KrantiKari Library',
@@ -12,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
       <Providers>
       {children}
       </Providers>
