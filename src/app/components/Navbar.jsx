@@ -1,78 +1,181 @@
-"use client"
+"use client";
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu ,NavbarMenuItem } from "@nextui-org/react";
-
+import {
+  FaChevronCircleDown,
+  FaChevronDown,
+  FaUser,
+  FaUserLock,
+} from "react-icons/fa";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  DropdownItem,
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+} from "@nextui-org/react";
+import Image from "next/image";
 
 const NavbarComponent = () => {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-    const menuItems = [
-      "Profile",
-      "Dashboard",
-      "Activity",
-      "Analytics",
-      "System",
-      "Deployments",
-      "My Settings",
-      "Team Settings",
-      "Help & Feedback",
-      "Log Out",
-    ];
+  const menuItems = ["Books", "Notices", "Contact", "About"];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className='bg-red-500'>
-    <NavbarContent>
-      <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden"
-      />
-      <NavbarBrand>
-        {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit text-white">KRANTIKARY LIBRARY</p>
-      </NavbarBrand>
-    </NavbarContent>
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="bg-red-500">
+      <NavbarContent className="text-white">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          {/* <Image src={'./next.svg'} width={80} height={80} /> */}
+          <p className="font-bold text-inherit ">KRANTIKARY LIBRARY</p>
+        </NavbarBrand>
+      </NavbarContent>
 
-    <NavbarContent className="hidden sm:flex gap-4" justify="center">
-      <NavbarItem>
-        <Link className='text-white' href="#">
-          Features
-        </Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link href="#" aria-current="page" className='text-white'>
-          Customers
-        </Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link className='text-white' href="#">
-          Integrations
-        </Link>
-      </NavbarItem>
-    </NavbarContent>
-    <NavbarContent justify="end">
-      <NavbarItem className="hidden lg:flex">
-        <Link href="#">Login</Link>
-      </NavbarItem>
-      <NavbarItem>
-        <Link as={Button} color="primary" href="/signup" variant="ghost">
-          Sign Up
-        </Link>
-      </NavbarItem>
-    </NavbarContent>
-    <NavbarMenu>
-      {menuItems.map((item, index) => (
-        <NavbarMenuItem key={`${item}-${index}`}>
-          <Link
-            className="w-full text-white"
-            href="#"
-            size="lg"
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-md"
+                radius="sm"
+                variant="light"
+                endContent={<FaChevronDown />}
+              >
+                Books
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu className="w-[340px]">
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Motivational Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Novel Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Religious Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Nepali Books
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="#" aria-current="page" className="text-white">
+            Notices
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-white" href="#">
+            Contact
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link className="text-white" href="#">
+            About
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link className="text-white" href="#">
+            Login
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button
+            href="https://github.com/nextui-org/nextui"
+            as={Link}
+            variant="solid"
+            color="default"
           >
-            {item}
+            Signup
+            <FaUser />
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        <NavbarMenuItem>
+          <Dropdown>
+            <DropdownTrigger>
+              <Link className="link text-md flex gap-2" >Books <FaChevronDown/></Link>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Static Actions">
+            <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Motivational Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Novel Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Religious Books
+              </DropdownItem>
+              <DropdownItem
+                key="Motivational Books"
+                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
+                startContent={FaChevronCircleDown}
+              >
+                Nepali Books
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className="w-full" href="#" size="lg">
+            Notices
           </Link>
         </NavbarMenuItem>
-      ))}
-    </NavbarMenu>
-  </Navbar>
-  )
-}
+        <NavbarMenuItem>
+          <Link className="w-full" href="#" size="lg">
+            Contact
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className="w-full" href="#" size="lg">
+            About
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
+  );
+};
 
-export default NavbarComponent
+export default NavbarComponent;
