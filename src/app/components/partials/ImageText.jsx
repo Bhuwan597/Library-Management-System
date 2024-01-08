@@ -11,7 +11,6 @@ const ImageText = ({ imageUrl, altText, displayText }) => {
         alt={altText}
         style={{
           display: "block",
-          margin: "auto",
           width: "100%",
           height: '100%',
           objectFit: 'cover'
@@ -30,7 +29,7 @@ const ImageText = ({ imageUrl, altText, displayText }) => {
           fontSize: "2em",
         }}
       >
-        <p className="text-2xl md:text-7xl font-extrabold text-wrap">{displayText}</p>
+        <p className="text-2xl md:text-7xl font-extrabold text-wrap motion-safe:animate-bounce infinite">{displayText}</p>
       </div>
     </div>
   );
