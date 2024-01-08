@@ -22,6 +22,7 @@ const CarouselComponent = () => {
                 additionalTransfrom={0}
                 arrows
                 autoPlaySpeed={2000}
+                autoPlay={2000}
                 centerMode={false}
                 className="rounded-md"
                 containerClass="container"
