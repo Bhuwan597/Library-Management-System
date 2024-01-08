@@ -104,7 +104,7 @@ const NavbarComponent = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link className="text-white" href="#">
+          <Link className="text-white" href={'/login'}>
             Login
           </Link>
         </NavbarItem>

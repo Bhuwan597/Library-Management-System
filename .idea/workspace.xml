@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="add imageText component">
+    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="add : other images in caraousel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2acqtW5qXLGWOyvb3XiONUGLJgJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,6 +64,7 @@
       <workItem from="1704635193951" duration="1969000" />
       <workItem from="1704638107222" duration="2791000" />
       <workItem from="1704680833514" duration="378000" />
+      <workItem from="1704702202738" duration="2294000" />
     </task>
     <task id="LOCAL-00001" summary="rename : carousel component">
       <option name="closed" value="true" />
@@ -86,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704642112394</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add : other images in caraousel">
+      <option name="closed" value="true" />
+      <created>1704702416227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704702416227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +119,7 @@
     <MESSAGE value="favicon added" />
     <MESSAGE value="rename : carousel component" />
     <MESSAGE value="add imageText component" />
-    <option name="LAST_COMMIT_MESSAGE" value="add imageText component" />
+    <MESSAGE value="add : other images in caraousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : other images in caraousel" />
   </component>
 </project>
