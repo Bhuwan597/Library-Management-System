@@ -61,7 +61,7 @@ const RegisterPage = () => {
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                                 Email address
                                 <Tooltip
-                                    content="Use your college email address"
+                                    content="Use your WRC college email address"
                                     className="ml-1 text-red-600"
                                 >
                                     <span>*</span>
