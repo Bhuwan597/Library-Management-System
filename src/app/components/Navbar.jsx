@@ -11,7 +11,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -22,6 +21,7 @@ import {
   DropdownMenu,
 } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -104,7 +104,7 @@ const NavbarComponent = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link className="text-white" href={'/login'}>
+          <Link className="text-white" href='/login'>
             Login
           </Link>
         </NavbarItem>
