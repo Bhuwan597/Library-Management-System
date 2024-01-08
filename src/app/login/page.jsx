@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-import {Button} from "@nextui-org/react";
+import {Button, Tooltip} from "@nextui-org/react";
 
 const LoginPage = () => {
     const [formData, setFormData] = useState({
@@ -38,6 +38,12 @@ const LoginPage = () => {
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                                 Email address
+                                <Tooltip
+                                    content="Use your college email address"
+                                    className="ml-1 text-red-600"
+                                >
+                                    <span>*</span>
+                                </Tooltip>
                             </label>
                             <div className="mt-2">
                                 <input

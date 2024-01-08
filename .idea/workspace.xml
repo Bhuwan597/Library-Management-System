@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="bugs : fix some warnings">
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.jsx" afterDir="false" />
+    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="change : button imported from nextui with loading effect">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <workItem from="1704635193951" duration="1969000" />
       <workItem from="1704638107222" duration="2791000" />
       <workItem from="1704680833514" duration="378000" />
-      <workItem from="1704702202738" duration="3753000" />
+      <workItem from="1704702202738" duration="4933000" />
     </task>
     <task id="LOCAL-00001" summary="rename : carousel component">
       <option name="closed" value="true" />
@@ -138,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704705742010</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change : button imported from nextui with loading effect">
+      <option name="closed" value="true" />
+      <created>1704706265404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704706265404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +174,7 @@
     <MESSAGE value="feat : add register page" />
     <MESSAGE value="chore : Link href added in sign up" />
     <MESSAGE value="bugs : fix some warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugs : fix some warnings" />
+    <MESSAGE value="change : button imported from nextui with loading effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="change : button imported from nextui with loading effect" />
   </component>
 </project>
