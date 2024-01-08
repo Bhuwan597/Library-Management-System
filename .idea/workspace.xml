@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="simplify validation codes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c049158c-e187-4e70-92e3-522422cd0f4e" name="Changes" comment="chore : contact navigation add" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +78,7 @@
       <workItem from="1704635193951" duration="1969000" />
       <workItem from="1704638107222" duration="2791000" />
       <workItem from="1704680833514" duration="378000" />
-      <workItem from="1704702202738" duration="14419000" />
+      <workItem from="1704702202738" duration="14771000" />
     </task>
     <task id="LOCAL-00001" summary="rename : carousel component">
       <option name="closed" value="true" />
@@ -226,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704718149973</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat : contact page added">
+      <option name="closed" value="true" />
+      <created>1704724250140</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704724250140</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore : contact navigation add">
+      <option name="closed" value="true" />
+      <created>1704724424971</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704724424971</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +276,8 @@
     <MESSAGE value="bugs : autocomplete attributes" />
     <MESSAGE value="bugs : autocomplete attributes fix" />
     <MESSAGE value="simplify validation codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplify validation codes" />
+    <MESSAGE value="feat : contact page added" />
+    <MESSAGE value="chore : contact navigation add" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore : contact navigation add" />
   </component>
 </project>

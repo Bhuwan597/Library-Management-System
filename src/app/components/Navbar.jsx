@@ -168,7 +168,7 @@ const NavbarComponent = () => {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="#" size="lg">
+          <Link className="w-full" href="/contact" size="lg">
             Contact
           </Link>
         </NavbarMenuItem>
