@@ -150,15 +150,16 @@ const ContactPage = () => {
                                     <div className="w-full grid grid-cols-12 gap-4">
                                         <Textarea
                                             variant={'underlined'}
-                                            description={"Explain your thoughts about the library!"}
+                                            description={formData.description.length < 1 ? "Explain your thoughts about the library!" : null}
                                             label="Description"
                                             labelPlacement="outside"
                                             isRequired
                                             name="description"
-                                            placeholder="Enter your description"
+                                            placeholder={formData.description.length >= 1 ? "Enter your description" : null}
                                             className="col-span-12 md:col-span-6 mb-6 md:mb-0"
                                             value={formData.description}
                                             onChange={handleInputChange}
+                                            errorMessage={formData.description.length < 50 && formData.description.length >= 1 && 'Description must be at least 50 characters long!'}
                                         />
                                     </div>
                                 </div>
