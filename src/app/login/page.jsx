@@ -89,7 +89,7 @@ const LoginPage = () => {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Don&apos;t Have an Account?{' '}
-                        <Link className="font-semibold leading-6 text-red-600 hover:text-red-500" href={'#'}>
+                        <Link className="font-semibold leading-6 text-red-600 hover:text-red-500" href='/register'>
                             Sign Up
                         </Link>
                     </p>
