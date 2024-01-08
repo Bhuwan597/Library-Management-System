@@ -45,6 +45,7 @@ const RegisterPage = () => {
                                     name='name'
                                     type="text"
                                     label="Name"
+                                    autoComplete='name'
                                     value={formData.name}
                                     onChange={handleChange}
                                 />
@@ -57,6 +58,7 @@ const RegisterPage = () => {
                                 <Input
                                     name='email'
                                     type="email"
+                                    autoComplete='email'
                                     label="Email"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -71,6 +73,7 @@ const RegisterPage = () => {
                                     name='password'
                                     type="password"
                                     label="Password"
+                                    autoComplete='new-password'
                                     value={formData.password}
                                     onChange={handleChange}
                                 />
@@ -83,6 +86,7 @@ const RegisterPage = () => {
                                 <Input
                                     name='confirmPassword'
                                     type="password"
+                                    autoComplete='confirm-password'
                                     label="Confirm Password"
                                     value={formData.confirmPassword}
                                     onChange={handleChange}

@@ -41,7 +41,7 @@ const LoginPage = () => {
                             <div className="mt-2">
                                 <Input
                                     name='email'
-                                    autoComplete
+                                    autoComplete='email'
                                     type="email"
                                     label="Email"
                                     value={formData.email}
@@ -61,7 +61,7 @@ const LoginPage = () => {
                             <div className="mt-2">
                                 <Input
                                     name='password'
-                                    autoComplete
+                                    autoComplete='current-password'
                                     type="password"
                                     label="Password"
                                     value={formData.password}
