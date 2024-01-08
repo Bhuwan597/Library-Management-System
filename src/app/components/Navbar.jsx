@@ -17,9 +17,10 @@ import {
   DropdownItem,
   DropdownTrigger,
   Dropdown,
-  DropdownMenu,
+  DropdownMenu, Image,
 } from "@nextui-org/react";
 import Link from "next/link";
+import {IoLibrary} from "react-icons/io5";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -34,7 +35,12 @@ const NavbarComponent = () => {
         />
         <NavbarBrand>
           {/* <Image src={'./next.svg'} width={80} height={80} /> */}
-          <p className="font-bold text-inherit ">KRANTIKARY LIBRARY</p>
+          <Link className='flex items-center' href='/'>
+            <IoLibrary color="white"/>
+            <p className="font-bold text-inherit ml-2" style={{fontStyle: 'italic', color: 'white'}}>
+              KRANTIKARY LIBRARY
+            </p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -43,7 +49,7 @@ const NavbarComponent = () => {
           <Dropdown>
             <DropdownTrigger>
               <Button
-                disableRipple
+                  disableRipple
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-md"
                 radius="sm"
                 variant="light"
