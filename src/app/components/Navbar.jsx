@@ -4,7 +4,6 @@ import {
   FaChevronCircleDown,
   FaChevronDown,
   FaUser,
-  FaUserLock,
 } from "react-icons/fa";
 import {
   Navbar,
@@ -20,7 +19,6 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
-import Image from "next/image";
 import Link from "next/link";
 
 const NavbarComponent = () => {
@@ -110,7 +108,7 @@ const NavbarComponent = () => {
         </NavbarItem>
         <NavbarItem>
           <Button
-            href="https://github.com/nextui-org/nextui"
+            href='/register'
             as={Link}
             variant="solid"
             color="default"
@@ -124,7 +122,7 @@ const NavbarComponent = () => {
         <NavbarMenuItem>
           <Dropdown>
             <DropdownTrigger>
-              <Link className="link text-md flex gap-2" >Books <FaChevronDown/></Link>
+              <Link href={'#'} className="link text-md flex gap-2" >Books <FaChevronDown/></Link>
             </DropdownTrigger>
             <DropdownMenu aria-label="Static Actions">
             <DropdownItem
