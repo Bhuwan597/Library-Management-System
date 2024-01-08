@@ -35,11 +35,11 @@ const RegisterPage = () => {
     value.match(/^pas\d{3}(bge|bct|bce|bme|bam|bel|bei)\d{3}@wrc\.edu\.np$/);
   const isInvalid = React.useMemo(() => {
     if (!emailTouched || formData?.email === "") return false;
-    return validateEmail(formData?.email) ? false : true;
+    return !validateEmail(formData?.email);
   }, [formData?.email]);
 
   const isInvalidPassword = React.useMemo(() => {
-    return formData?.password === formData?.confirmPassword ? false : true;
+    return formData?.password !== formData?.confirmPassword;
   }, [formData?.password, formData?.confirmPassword]);
 
   return (
@@ -155,7 +155,7 @@ const RegisterPage = () => {
 
             <div>
               <Button
-                isDisabled={!isInvalid && !isInvalidPassword ? false : true}
+                isDisabled={!(!isInvalid && !isInvalidPassword)}
                 type={!isInvalid && !isInvalidPassword ? "submit" : "button"}
                 className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
               >
