@@ -38,7 +38,7 @@ const NavbarComponent = () => {
           <Link className='flex items-center' href='/'>
             <IoLibrary color="white"/>
             <p className="font-bold text-inherit ml-2" style={{fontStyle: 'italic', color: 'white'}}>
-              KRANTIKARY LIBRARY
+              KRANTIKARI LIBRARY
             </p>
           </Link>
         </NavbarBrand>
@@ -96,7 +96,7 @@ const NavbarComponent = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-white" href="#">
+          <Link className="text-white" href="/contact">
             Contact
           </Link>
         </NavbarItem>
