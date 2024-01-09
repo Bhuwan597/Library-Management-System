@@ -64,8 +64,8 @@ const Books = () => {
                     ))}
                 </div>
                 <div className="mt-8 text-center">
-                    <Link href="/books"   className="font-semibold leading-6 text-red-600 hover:text-red-500" >
-                       View All Books
+                    <Link href="/books"   className="font-semibold leading-6 text-red-600 hover:text-red-500 " >
+                    <span className='underline'>View All Books</span>
                         <PiBooksBold className="inline-block ml-2 text-xl text-red-400 pointer-events-none flex-shrink-0"/>
                     </Link>
                 </div>
