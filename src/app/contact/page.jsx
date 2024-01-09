@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Navbar from "@/app/components/Navbar";
-import Contactform from "../components/partials/Contactform";
+import ContactForm from "@/app/components/partials/ContactForm";
 
 const ContactPage = () => {
  
@@ -129,7 +129,7 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              <Contactform />
+              <ContactForm/>
             </div>
           </div>
         </div>
