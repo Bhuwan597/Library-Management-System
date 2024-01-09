@@ -46,36 +46,6 @@ const Footer = () => {
                                 </form>
                             </div>
 
-                            {/*<div className="col-span-2 sm:col-span-1">*/}
-                            {/*    <p className="font-medium text-gray-900">Services</p>*/}
-
-                            {/*    <ul className="mt-6 space-y-4 text-sm">*/}
-                            {/*        <li>*/}
-                            {/*            <Link href="#" className="text-gray-700 transition hover:opacity-75"> 1on1*/}
-                            {/*                Coaching </Link>*/}
-                            {/*        </li>*/}
-
-                            {/*        <li>*/}
-                            {/*            <Link href="#" className="text-gray-700 transition hover:opacity-75"> Company*/}
-                            {/*                Review </Link>*/}
-                            {/*        </li>*/}
-
-                            {/*        <li>*/}
-                            {/*            <Link href="#" className="text-gray-700 transition hover:opacity-75"> Accounts*/}
-                            {/*                Review </Link>*/}
-                            {/*        </li>*/}
-
-                            {/*        <li>*/}
-                            {/*            <Link href="#" className="text-gray-700 transition hover:opacity-75"> HR*/}
-                            {/*                Consulting </Link>*/}
-                            {/*        </li>*/}
-
-                            {/*        <li>*/}
-                            {/*            <Link href="#" className="text-gray-700 transition hover:opacity-75"> SEO*/}
-                            {/*                Optimisation </Link>*/}
-                            {/*        </li>*/}
-                            {/*    </ul>*/}
-                            {/*</div>*/}
 
                             <div className="col-span-2 sm:col-span-1">
                                 <p className="font-medium text-gray-900">Organization</p>
