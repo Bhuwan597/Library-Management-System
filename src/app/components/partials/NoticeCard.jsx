@@ -10,13 +10,13 @@ const NoticeCard = ({title, description, publishedDate, category}) => {
     <Link href={'#'}><h5 className="mb-1 text-lg font-bold">{title}</h5></Link>
 
       <div
-        className="mb-1 flex items-center justify-center text-sm font-medium text-danger dark:text-danger-500 md:justify-start">
+        className="mb-1 flex items-center justify-center text-sm font-medium text-danger  md:justify-start">
         {category}
       </div>
-      <p className="mb-2 text-neutral-700 dark:text-neutral-300">
+      <p className="mb-2 text-neutral-700 ">
         <small>Published <u>{publishedDate}</u></small>
       </p>
-       <p className="text-neutral-500 dark:text-neutral-300">
+       <p className="text-neutral-500">
        {description}
       </p>
     </div>
