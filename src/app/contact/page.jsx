@@ -1,8 +1,7 @@
-"use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/app/components/Navbar";
-import ContactForm from "@/app/components/partials/ContactForm";
+import ContactForm from "@/app/components/forms/ContactForm";
 
 const ContactPage = () => {
  
