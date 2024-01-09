@@ -1,10 +1,10 @@
-import React, {useState} from "react";
-import {Button, Input} from "@nextui-org/react";
-import {FaEnvelope, FaEye, FaEyeSlash} from "react-icons/fa";
-import ForgotModal from "@/app/components/partials/ForgotModal";
+'use client';
 
+import React, { useState } from "react";
+import { Button, Input } from "@nextui-org/react";
+import { FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
 
-const LoginForm = ({onSubmit}) => {
+const LoginForm = () => {
     const [isVisible, setIsVisible] = React.useState(false);
 
     const toggleVisibility = () => setIsVisible(!isVisible);
@@ -14,7 +14,7 @@ const LoginForm = ({onSubmit}) => {
     });
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
@@ -23,7 +23,7 @@ const LoginForm = ({onSubmit}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(formData);
+        console.log("Form data submitted:", formData);
     };
 
     return (
@@ -37,8 +37,7 @@ const LoginForm = ({onSubmit}) => {
                         label="Email"
                         value={formData.email}
                         onChange={handleChange}
-                        endContent={<FaEnvelope
-                            className="text-xl text-default-400 pointer-events-none flex-shrink-0"/>}
+                        endContent={<FaEnvelope className="text-xl text-default-400 pointer-events-none flex-shrink-0" />}
                     />
                 </div>
             </div>
@@ -46,7 +45,9 @@ const LoginForm = ({onSubmit}) => {
             <div>
                 <div className="flex items-center justify-between">
                     <div className="text-sm">
-                        <ForgotModal text={'Forgot password?'}/>
+                        <button type="button" className="font-semibold text-red-600 hover:text-red-500">
+                            Forgot password?
+                        </button>
                     </div>
                 </div>
                 <div className="mt-2">
@@ -58,15 +59,11 @@ const LoginForm = ({onSubmit}) => {
                         value={formData.password}
                         onChange={handleChange}
                         endContent={
-                            <button
-                                className="focus:outline-none"
-                                type="button"
-                                onClick={toggleVisibility}
-                            >
+                            <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
                                 {isVisible ? (
-                                    <FaEyeSlash className="text-2xl text-default-400 pointer-events-none"/>
+                                    <FaEyeSlash className="text-2xl text-default-400 pointer-events-none" />
                                 ) : (
-                                    <FaEye className="text-2xl text-default-400 pointer-events-none"/>
+                                    <FaEye className="text-2xl text-default-400 pointer-events-none" />
                                 )}
                             </button>
                         }
