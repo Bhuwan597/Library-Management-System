@@ -1,8 +1,7 @@
 import React from 'react';
 import Bookcard from "@/app/components/partials/Bookcard";
-import {Button} from "@nextui-org/react";
-import Link from "next/link";
 import {PiBooksBold} from "react-icons/pi";
+import Link from "next/link";
 
 const Books = () => {
     // Sample data for books
@@ -65,12 +64,9 @@ const Books = () => {
                     ))}
                 </div>
                 <div className="mt-8 text-center">
-                    <Link href="/books" passHref>
-                        <Button color="default" variant="faded"
-                                className="w-[50%] lg:w-[30%] p-2 hover:scale-105 transition-transform ease-in-out duration-300 "
-                                endContent={<PiBooksBold size={20} className='text-red-700'/>}>
-                            <span className='text-red-900 font-semibold'>View All Books</span>
-                        </Button>
+                    <Link href="/books"   className="font-semibold leading-6 text-red-600 hover:text-red-500" >
+                       View All Books
+                        <PiBooksBold className="inline-block ml-2 text-xl text-red-400 pointer-events-none flex-shrink-0"/>
                     </Link>
                 </div>
             </div>
