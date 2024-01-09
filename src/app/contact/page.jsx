@@ -61,11 +61,27 @@ const ContactPage = () => {
                                     </svg>
                                     <div className="ml-4 text-md tracking-wide font-semibold w-40">
 
-                                        <a href="https://www.google.com/maps/place/%E0%A4%AA%E0%A4%B6%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%AE%E0%A4%BE%E0%A4%9E%E0%A5%8D%E0%A4%9A%E0%A4%B2+%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%B8/@28.2551339,83.9743984,17z/data=!4m10!1m2!2m1!1sPaschimanchal+Campus+!3m6!1s0x3995947ddb83ddc5:0xcd98c6b6d110d582!8m2!3d28.2538926!4d83.9764104!15sChRQYXNjaGltYW5jaGFsIENhbXB1c5IBEmdvdmVybm1lbnRfY29sbGVnZeABAA!16s%2Fm%2F011pz_5h?entry=ttu"
+                                        <a href="https://www.google.com/maps/place/Paschimanchal+Campus+Gate/@28.2551339,83.9743984,17z/data=!4m10!1m2!2m1!1sPaschimanchal+Campus+!3m6!1s0x39959514e2774df9:0xd972d1047ddab577!8m2!3d28.2563752!4d83.9775708!15sChRQYXNjaGltYW5jaGFsIENhbXB1c5IBF2VkdWNhdGlvbmFsX2luc3RpdHV0aW9u4AEA!16s%2Fg%2F11hyd4g2df?entry=ttu"
                                            target="_blank" rel="noopener noreferrer">
                                             Pashchimanchal Campus,
                                             Lamachaur, Pokhara
                                         </a>
+                                    </div>
+                                    <div style={{position: 'relative', height: '150px', width: '50%'}}>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14057.535432847406!2d83.9585163871582!3d28.256375199999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959514e2774df9%3A0xd972d1047ddab577!2sPaschimanchal%20Campus%20Gate!5e0!3m2!1sne!2snp!4v1704768544301!5m2!1sne!2snp"
+                                            style={{
+                                                position: 'absolute',
+                                                top: 0,
+                                                left: 10,
+                                                width: '100%',
+                                                height: '100%',
+                                                border: '0'
+                                            }}
+                                            allowFullScreen=""
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        ></iframe>
                                     </div>
                                 </div>
 
@@ -169,10 +185,15 @@ const ContactPage = () => {
                                     Submit
                                 </Button>
                             </form>
+
+
                         </div>
                     </div>
+
                 </div>
             </div>
+
+
         </>
     );
 };
