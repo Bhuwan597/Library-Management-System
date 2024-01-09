@@ -8,22 +8,21 @@ import Divider from "./partials/Divider";
 const NewArrivals = () => {
   return (
     <>
-      <div className="mx-10 md:mx-20 mt-20">
-        <p className="text-sm text-red-500">Learn from today</p>
-        <h2 className="text-left text-xl md:text-2xl font-bold">
-          Newly Arrivals 
-        </h2>
-        <Divider text={"Slide to view more"} />
-      </div>
-      <div className="flex w-full items-center justify-center px-5">
-        <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="container"
-          dotListClass=""
+        <div className="container mx-auto my-10 px-4">
+            <div className="text-center mb-8">
+                <p className="text-sm text-red-500">Learn from Today</p>
+                <h2 className="text-3xl md:text-4xl font-bold">Newly Arrivals</h2>
+                <Divider text={"Slide to view more"}/>
+            </div>
+            <div className="flex w-full items-center justify-center px-5">
+                <Carousel
+                    additionalTransfrom={0}
+                    arrows
+                    autoPlaySpeed={3000}
+                    centerMode={false}
+                    className=""
+                    containerClass="container"
+                    dotListClass=""
           draggable
           focusOnSelect={false}
           infinite
@@ -98,6 +97,7 @@ const NewArrivals = () => {
           />
         </Carousel>
       </div>
+        </div>
     </>
   );
 };

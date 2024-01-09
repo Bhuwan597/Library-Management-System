@@ -16,7 +16,7 @@ const Bookcard = ({ imageSrc, title, author, slug }) => {
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <h4 className="font-bold text-large">{title}</h4>
         <p className="text-tiny uppercase font-bold">{author}</p>
-        <Button className='w-full mt-4' as={Link} href={`/books/${slug}`} color="danger" vairant='solid' endContent={<FaArrowRight/>}>View</Button>
+        <Button className='w-full mt-4' as={Link} href={`/books/${slug}`} color="danger" vairant='solid' endContent={<FaArrowRight />}>View</Button>
       </CardHeader>
     </Card>
   );
