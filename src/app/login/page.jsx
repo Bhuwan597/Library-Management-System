@@ -4,6 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
 import { Button, Input } from "@nextui-org/react";
 import { FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
+import Forgotmodal from "../components/partials/Forgotmodal";
 
 const LoginPage = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -48,7 +49,9 @@ const LoginPage = () => {
                   label="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  endContent={<FaEnvelope className="text-xl text-default-400 pointer-events-none flex-shrink-0"/>}
+                  endContent={
+                    <FaEnvelope className="text-xl text-default-400 pointer-events-none flex-shrink-0" />
+                  }
                 />
               </div>
             </div>
@@ -56,12 +59,7 @@ const LoginPage = () => {
             <div>
               <div className="flex items-center justify-between">
                 <div className="text-sm">
-                  <Link
-                    href="#"
-                    className="font-semibold text-red-600 hover:text-red-500"
-                  >
-                    Forgot password?
-                  </Link>
+                  <Forgotmodal text={'Forgot Password?'}/>
                 </div>
               </div>
               <div className="mt-2">
