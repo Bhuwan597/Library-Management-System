@@ -4,16 +4,18 @@ import CarouselComponent from "@/app/components/Carousel";
 import NewArrivals from "@/app/components/NewArrivals";
 import RecommendedBooks from "@/app/components/RecommendedBooks";
 import RecentNotices from "./components/RecentNotices";
+import UpcomingBooks from "./components/UpcomingBooks";
 
 export default function Home() {
-    return (
-        <>
-            <Navbar/>
-            <Hero/>
-            <CarouselComponent/>
-            <NewArrivals/>
-            <RecommendedBooks/>
-            <RecentNotices/>
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <UpcomingBooks/>
+      <CarouselComponent />
+      <NewArrivals />
+      <RecommendedBooks />
+      <RecentNotices />
+    </>
+  );
 }
