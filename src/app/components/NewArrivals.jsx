@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import Bookcard from "./partials/Bookcard";
 import Divider from "./partials/Divider";
 
-const Newarrivals = () => {
+const NewArrivals = () => {
   return (
     <>
       <div className="mx-10 md:mx-20 mt-20">
@@ -102,4 +102,4 @@ const Newarrivals = () => {
   );
 };
 
-export default Newarrivals;
+export default NewArrivals;
