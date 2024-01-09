@@ -4,6 +4,7 @@ import CarouselComponent from "@/app/components/Carousel";
 import NewArrivals from "@/app/components/NewArrivals";
 import RecommendedBooks from "@/app/components/RecommendedBooks";
 import RecentNotices from "./components/RecentNotices";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <NewArrivals/>
             <RecommendedBooks/>
             <RecentNotices/>
+            <Footer/>
         </>
     );
 }
