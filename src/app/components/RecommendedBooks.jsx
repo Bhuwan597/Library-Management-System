@@ -87,9 +87,10 @@ const Books = () => {
 
                 <div className="mt-8 text-center">
                     <Link href="/books" passHref>
-                        <Button color="default" variant="faded" className="w-[50%]"
-                                endContent={<PiBooksBold size={20}/>}>
-                            View All Books
+                        <Button color="default" variant="faded"
+                                className="w-[50%] lg:w-[30%] p-2 hover:scale-105 transition-transform ease-in-out duration-300 "
+                                endContent={<PiBooksBold size={20} className='text-red-700'/>}>
+                            <span className='text-red-900 font-semibold'>View All Books</span>
                         </Button>
                     </Link>
                 </div>
