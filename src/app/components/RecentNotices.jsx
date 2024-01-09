@@ -75,7 +75,7 @@ const RecentNotices = () => {
                     Notices and Announcements
                 </h2>
             </div>
-            <section className="mb-32 text-center md:text-left mt-5 grid grid-cols-1 md:grid-cols-2">
+            <section className="mb-20 text-center md:text-left mt-5 grid grid-cols-1 md:grid-cols-2">
                 {newsAndNotices?.map((n, index) => {
                     return (
                         <NoticeCard

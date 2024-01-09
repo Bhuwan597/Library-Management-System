@@ -6,6 +6,8 @@ import RecommendedBooks from "@/app/components/RecommendedBooks";
 import RecentNotices from "./components/RecentNotices";
 import UpcomingBooks from "./components/UpcomingBooks";
 import Footer from "@/app/components/Footer";
+import Statistics from "./components/Statistics";
+import MessageFromPresident from "./components/MessageFromPresident";
 
 export default function Home() {
     return (
@@ -17,6 +19,8 @@ export default function Home() {
             <NewArrivals/>
             <RecommendedBooks/>
             <RecentNotices/>
+            <Statistics/>
+            <MessageFromPresident/>
             <Footer/>
         </>
     );

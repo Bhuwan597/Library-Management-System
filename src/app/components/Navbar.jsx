@@ -27,14 +27,13 @@ const NavbarComponent = () => {
 
   const menuItems = ["Books", "Notices", "Contact", "About"];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="bg-red-500">
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="bg-red-600">
       <NavbarContent className="text-white">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          {/* <Image src={'./next.svg'} width={80} height={80} /> */}
           <Link className='flex items-center' href='/'>
             <IoLibrary color="white"/>
             <p className="font-bold text-inherit ml-2" style={{fontStyle: 'italic', color: 'white'}}>
@@ -46,49 +45,9 @@ const NavbarComponent = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Dropdown>
-            <DropdownTrigger>
-              <Button
-                  disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white text-md"
-                radius="sm"
-                variant="light"
-                endContent={<FaChevronDown />}
-              >
-                Books
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu className="w-[340px]">
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Motivational Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Novel Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Religious Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Nepali Books
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+        <Link href="#" aria-current="page" className="text-white">
+            Books
+          </Link>
         </NavbarItem>
         <NavbarItem>
           <Link href="#" aria-current="page" className="text-white">
@@ -126,41 +85,9 @@ const NavbarComponent = () => {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-          <Dropdown>
-            <DropdownTrigger>
-              <Link href={'#'} className="link text-md flex gap-2" >Books <FaChevronDown/></Link>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions">
-            <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Motivational Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Novel Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Religious Books
-              </DropdownItem>
-              <DropdownItem
-                key="Motivational Books"
-                description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, dolores?"
-                startContent={FaChevronCircleDown}
-              >
-                Nepali Books
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
+        <Link href="#" aria-current="page" size='lg'>
+            Books
+          </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link className="w-full" href="#" size="lg">
