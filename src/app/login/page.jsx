@@ -4,8 +4,6 @@ import Link from "next/link";
 import LoginForm from "@/app/components/partials/LoginForm";
 
 const LoginPage = () => {
-
-
     return (
         <>
             <Navbar />
