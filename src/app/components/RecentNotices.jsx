@@ -5,7 +5,6 @@ const RecentNotices = () => {
     let newsAndNotices = [
         {
             title: "New Books on Library",
-
             publishedDate: "13-01-2022",
             category: "Information",
             description:
