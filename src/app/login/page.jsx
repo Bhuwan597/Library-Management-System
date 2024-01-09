@@ -1,7 +1,7 @@
 
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-import LoginForm from "@/app/components/partials/LoginForm";
+import LoginForm from "@/app/components/forms/LoginForm";
 
 const LoginPage = () => {
     return (

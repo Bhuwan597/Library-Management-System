@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-import RegisterForm from "@/app/components/partials/RegisterForm";
+import RegisterForm from "@/app/components/forms/RegisterForm";
 
 
 const RegisterPage = () => {
