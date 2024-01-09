@@ -11,39 +11,32 @@ const Books = () => {
     // Sample data for books
     const booksData = [
         {
-            title: "Book 1",
-            author: "Author 1",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-1",
+            title: "Think and Grow Rich",
+            author: "Napolean Hill",
+            imageSrc: "/thinkandgrowrich.jpg",
         },
         {
-            title: "Book 2",
-            author: "Author 2",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-2",
+            title: "Jhola",
+            author: "Krishna Dharabasi",
+            imageSrc: "/jhola.jpg",
         },
         {
-            title: "Book 3",
-            author: "Author 3",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-3",
+            title: "FirFire",
+            author: "BuddhiSagar",
+            imageSrc: "/firfire.jpg",
         }, {
-            title: "Book 4",
-            author: "Author 4",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-4",
+            title: "Rich Dad Poor Dad",
+            author: "Robert Kiyosaki",
+            imageSrc: "/richdadpoordad.jpg",
         }, {
-            title: "Book 5",
-            author: "Author 5",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-5",
+            title: "Summer Love",
+            author: "Subin Bhattrai",
+            imageSrc: "/summerlove.jpg",
         }, {
-            title: "Book 6",
-            author: "Author 6",
-            imageSrc: "/atomic_habits.png",
-            slug: "book-6",
+            title: "Fatsungh",
+            author: "Chuden Kabimo",
+            imageSrc: "/fatsungh.jpg",
         },
-        // Add more books as needed
     ];
 
     const [screenWidth, setScreenWidth] = useState(0);
@@ -73,14 +66,14 @@ const Books = () => {
                     <Divider text={'Swipe Down to view more'}/>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {booksData.slice(0, numBooksToShow).map((book, index) => (
                         <Bookcard
                             key={index}
                             title={book.title}
                             author={book.author}
                             imageSrc={book.imageSrc}
-                            slug={book.slug}
+                            slug={book.title.replace(/\s+/g, '').toLowerCase()}
                         />
                     ))}
                 </div>
@@ -95,6 +88,7 @@ const Books = () => {
                     </Link>
                 </div>
             </div>
+
         </>
     );
 };
