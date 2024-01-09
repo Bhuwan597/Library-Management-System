@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import {
   Modal,
   ModalContent,
@@ -7,13 +7,12 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Checkbox,
   Input,
   Link,
 } from "@nextui-org/react";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
-const Forgotmodal = ({text}) => {
+const ForgotModal = ({text}) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <>
@@ -50,4 +49,4 @@ const Forgotmodal = ({text}) => {
   );
 };
 
-export default Forgotmodal;
+export default ForgotModal;

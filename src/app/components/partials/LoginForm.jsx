@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {Button, Input} from "@nextui-org/react";
 import {FaEnvelope, FaEye, FaEyeSlash} from "react-icons/fa";
-import Forgotmodal  from "./Forgotmodal";
- "@/app/components/partials/Forgotmodal";
+import ForgotModal from "@/app/components/partials/ForgotModal";
+
 
 const LoginForm = ({onSubmit}) => {
     const [isVisible, setIsVisible] = React.useState(false);
@@ -46,7 +46,7 @@ const LoginForm = ({onSubmit}) => {
             <div>
                 <div className="flex items-center justify-between">
                     <div className="text-sm">
-                        <Forgotmodal text={'Forgot password?'}/>
+                        <ForgotModal text={'Forgot password?'}/>
                     </div>
                 </div>
                 <div className="mt-2">
