@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import {
-  FaChevronCircleDown,
-  FaChevronDown,
+
   FaUser,
 } from "react-icons/fa";
 import {
@@ -14,10 +13,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu, Image,
 } from "@nextui-org/react";
 import Link from "next/link";
 import {IoLibrary} from "react-icons/io5";
@@ -45,12 +40,12 @@ const NavbarComponent = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-        <Link href="#" aria-current="page" className="text-white">
+        <Link href="/books" aria-current="page" className="text-white">
             Books
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" aria-current="page" className="text-white">
+          <Link href="/notices" aria-current="page" className="text-white">
             Notices
           </Link>
         </NavbarItem>
@@ -60,7 +55,7 @@ const NavbarComponent = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-white" href="#">
+          <Link className="text-white" href="/about">
             About
           </Link>
         </NavbarItem>
@@ -85,12 +80,12 @@ const NavbarComponent = () => {
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>
-        <Link href="#" aria-current="page" size='lg'>
+        <Link href="/books" aria-current="page" size='lg'>
             Books
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="#" size="lg">
+          <Link className="w-full" href="/notices" size="lg">
             Notices
           </Link>
         </NavbarMenuItem>
@@ -100,7 +95,7 @@ const NavbarComponent = () => {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="#" size="lg">
+          <Link className="w-full" href="/about" size="lg">
             About
           </Link>
         </NavbarMenuItem>
