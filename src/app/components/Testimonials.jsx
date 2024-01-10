@@ -15,21 +15,18 @@ const Testimonials = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <TestimonialCards
-                        rating={'5'}
                         name={"AsHim Shrestha"}
                         avatarSrc={''}
                         designation={'BCT Student'}
                         content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloribus, tempora beatae ratione ipsam amet molestiae, quis quibusdam dicta suscipit id temporibus pariatur nulla placeat dignissimos atque deserunt autem soluta dolor? Ad, aliquam, doloribus earum doloremque velit excepturi eligendi, a pariatur eveniet maiores enim maxime sequi cum '}
                     />
                     <TestimonialCards
-                        rating={'5'}
                         name={"Bhuwan Acharya"}
                         avatarSrc={''}
                         designation={'BEI Student'}
                         content={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloribus, tempora beatae ratione ipsam amet molestiae, quis quibusdam dicta suscipit id temporibus pariatur nulla placeat dignissimos atque deserunt autem soluta dolor? Ad, aliquam, doloribus earum doloremque velit excepturi eligendi, a pariatur eveniet maiores enim maxime sequi cum '}
                     />
                     <TestimonialCards
-                        rating={'5'}
                         name={"Hari Har Mahadev"}
                         avatarSrc={''}
                         designation={'BCE Student'}
