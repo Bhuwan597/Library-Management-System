@@ -8,6 +8,7 @@ import UpcomingBooks from "./components/UpcomingBooks";
 import Footer from "@/app/components/Footer";
 import Statistics from "./components/Statistics";
 import MessageFromPresident from "./components/MessageFromPresident";
+import Testimonials from "@/app/components/Testimonials";
 
 export default function Home() {
     return (
@@ -21,6 +22,7 @@ export default function Home() {
             <RecentNotices/>
             <Statistics/>
             <MessageFromPresident/>
+            <Testimonials/>
             <Footer/>
         </>
     );
