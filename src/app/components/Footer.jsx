@@ -16,12 +16,12 @@ const Footer = () => {
               <div className="col-span-2">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    KrantiKari Library - Paschimanchal Campus
+                    KrantiKari Library - Pashchimanchal Campus
                   </h2>
 
                   <p className="mt-4 text-gray-500">
                     Library established by Akhil KrantiKari 31st Committee,
-                    Paschimanchal Campus.
+                    Pashchimanchal Campus.
                   </p>
                 </div>
               </div>
