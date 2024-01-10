@@ -4,15 +4,15 @@ import { FaBriefcase } from 'react-icons/fa';
 
 const TestimonialCards = ({ name, content, designation, avatarSrc }) => {
     return (
-        <Card className="max-w-md mx-auto p-6 rounded-md shadow-md bg-white transition-transform transform hover:scale-105">
-            <p className="text-lg text-gray-800 mb-4">
+        <Card isPressable className="max-w-md mx-auto p-6 rounded-md shadow-md bg-gray-50 hover:bg-gray-200 transition-transform transform hover:scale-105">
+            <p className="text-lg text-gray-700 mb-4">
                 {content}
             </p>
 
             <div className="flex items-center">
                 <div className="flex items-center">
-                    <Avatar  isBordered radius="lg" src={avatarSrc} />
-                    <p className="font-semibold text-indigo-600 ml-4">{name}</p>
+                    <Avatar isBordered radius="lg" src={avatarSrc} />
+                    <p className="font-semibold text-indigo-600 ml-4 text-lg">{name}</p>
                 </div>
 
                 {designation && (
