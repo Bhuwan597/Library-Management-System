@@ -16,7 +16,7 @@ const TestimonialCards = ({name, content, designation, avatarSrc, rating}) => {
     return (
         <Card
             isPressable
-            className="max-w-md mx-auto p-6 rounded-md shadow-md bg-white hover:shadow-lg transition-transform transform hover:scale-105"
+            className="max-w-md mx-auto p-6 rounded-md shadow-md bg-gray-50 hover:shadow-lg transition-transform transform hover:scale-105"
         >
             <p className="text-lg text-gray-700 mb-4">{content}</p>
 
