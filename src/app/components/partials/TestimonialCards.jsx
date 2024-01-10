@@ -1,8 +1,17 @@
 import React from 'react';
 import { Avatar, Card } from "@nextui-org/react";
-import { FaBriefcase } from 'react-icons/fa';
+import {  FaStar } from 'react-icons/fa';
 
-const TestimonialCards = ({ name, content, designation, avatarSrc }) => {
+const TestimonialCards = ({ name, content, designation, avatarSrc, rating }) => {
+    const renderStars = () => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            stars.push(
+                <FaStar key={i} className={`text-${i <= rating ? 'yellow-500' : 'gray-400'} mr-1`} />
+            );
+        }
+        return stars;
+    };
     return (
         <Card isPressable className="max-w-md mx-auto p-6 rounded-md shadow-md bg-gray-50 hover:bg-gray-200 transition-transform transform hover:scale-105">
             <p className="text-lg text-gray-700 mb-4">
@@ -12,13 +21,15 @@ const TestimonialCards = ({ name, content, designation, avatarSrc }) => {
             <div className="flex items-center">
                 <div className="flex items-center">
                     <Avatar isBordered radius="lg" src={avatarSrc} />
-                    <p className="font-semibold text-indigo-600 ml-4 text-lg">{name}</p>
+                    <div className="ml-4">
+                        <p className="font-semibold text-indigo-600 text-lg">{name}</p>
+                        {designation && <p className="text-gray-600">{designation}</p>}
+                    </div>
                 </div>
 
-                {designation && (
+                {rating && (
                     <div className="flex items-center ml-4">
-                        <FaBriefcase className="mr-2 text-gray-600" />
-                        <p className="text-gray-600">{designation}</p>
+                        {renderStars()}
                     </div>
                 )}
             </div>
