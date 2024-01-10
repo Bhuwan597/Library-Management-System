@@ -11,7 +11,7 @@ const ContactPage = () => {
       <div className="relative flex items-top justify-center min-h-screen bg-white sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div className="mt-8 overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 place-self-center">
               <div className="p-6 mr-2 bg-gray-100  sm:rounded-lg">
                 <h1 className="text-4xl sm:text-5xl text-red-600  font-extrabold tracking-tight">
                   Get in touch
@@ -46,7 +46,7 @@ const ContactPage = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                  <div className="ml-4 text-md tracking-wide font-semibold">
                     <a
                       href="https://www.google.com/maps/place/Paschimanchal+Campus+Gate/@28.2551339,83.9743984,17z/data=!4m10!1m2!2m1!1sPaschimanchal+Campus+!3m6!1s0x39959514e2774df9:0xd972d1047ddab577!8m2!3d28.2563752!4d83.9775708!15sChRQYXNjaGltYW5jaGFsIENhbXB1c5IBF2VkdWNhdGlvbmFsX2luc3RpdHV0aW9u4AEA!16s%2Fg%2F11hyd4g2df?entry=ttu"
                       target="_blank"
@@ -54,28 +54,6 @@ const ContactPage = () => {
                     >
                       Pashchimanchal Campus, Lamachaur, Pokhara
                     </a>
-                  </div>
-                  <div
-                    style={{
-                      position: "relative",
-                      height: "150px",
-                      width: "50%",
-                    }}
-                  >
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14057.535432847406!2d83.9585163871582!3d28.256375199999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959514e2774df9%3A0xd972d1047ddab577!2sPaschimanchal%20Campus%20Gate!5e0!3m2!1sne!2snp!4v1704768544301!5m2!1sne!2snp"
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 10,
-                        width: "100%",
-                        height: "100%",
-                        border: "0",
-                      }}
-                      allowFullScreen=""
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
                   </div>
                 </div>
 
@@ -127,6 +105,30 @@ const ContactPage = () => {
                     </a>
                   </div>
                 </div>
+                <div
+                    style={{
+                      position: "relative",
+                      height: "200px",
+                      width: "100%",
+                      padding: "1em",
+                      marginTop: "20px"
+                    }}
+                  >
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14057.535432847406!2d83.9585163871582!3d28.256375199999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959514e2774df9%3A0xd972d1047ddab577!2sPaschimanchal%20Campus%20Gate!5e0!3m2!1sne!2snp!4v1704768544301!5m2!1sne!2snp"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 10,
+                        width: "100%",
+                        height: "100%",
+                        border: "0",
+                      }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
               </div>
               <ContactForm/>
             </div>
