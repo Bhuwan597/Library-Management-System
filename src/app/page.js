@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 import CarouselComponent from "@/app/components/Carousel";
 import NewArrivals from "@/app/components/NewArrivals";
 import RecommendedBooks from "@/app/components/RecommendedBooks";
@@ -13,7 +12,6 @@ import Testimonials from "@/app/components/Testimonials";
 export default function Home() {
     return (
         <>
-            <Navbar/>
             <Hero/>
             <UpcomingBooks/>
             <CarouselComponent/>
