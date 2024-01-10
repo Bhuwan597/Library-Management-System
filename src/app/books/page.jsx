@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 const BooksPage = () => {
     return (
         <>
-            <NavbarComponent/>
             <AllBooks/>
             <Footer/>
         </>
