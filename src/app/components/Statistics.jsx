@@ -1,5 +1,5 @@
 import React from "react";
-import {AcademicCapIcon, BookOpenIcon, LibraryIcon, UserIcon} from '@heroicons/react/solid';
+import {AcademicCapIcon, BookOpenIcon, LibraryIcon, UsersIcon} from '@heroicons/react/solid';
 
 const Statistics = () => {
     return (
@@ -24,7 +24,7 @@ const Statistics = () => {
                                     Active Users
                                 </dt>
                                 <dd className="order-first flex items-center justify-center text-3xl font-semibold tracking-tight text-gray-900">
-                                    <UserIcon className="w-8 h-8 mr-2"/> 345
+                                    <UsersIcon className="w-8 h-8 mr-2"/> 345
                                 </dd>
                             </div>
                             <div className="flex flex-col bg-gray-200/50 p-8">
