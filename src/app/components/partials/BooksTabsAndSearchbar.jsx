@@ -2,6 +2,7 @@
 import React from "react";
 import { Chip, Input, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import { FaSearch } from "react-icons/fa";
+import {useRouter} from "next/navigation";
 
 const BooksTabsAndSearchbar = () => {
   const categories = [
@@ -13,18 +14,34 @@ const BooksTabsAndSearchbar = () => {
   ];
   const handleCategorySelection = (value) => {
     console.log(value);
+
+
   };
+  const router = useRouter();
+
+  const [searchTerm, setSearchTerm] = React.useState("");
+    const handleSearchTermChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(!searchTerm) return;
+        router.push(`/search/${searchTerm}`);
+    }
+
   return (
     <>
-      <div className="flex md:justify-end px-4 my-10 gap-2 w-full">
+      <form onSubmit={handleSubmit} className="flex md:justify-end px-4 my-10 gap-2 w-full">
         <Input
           className="h-full font-normal text-default-500 text-small rounded-lg md:w-1/2 lg:w-1/3"
           placeholder="Type to search..."
           size="sm"
           startContent={<FaSearch size={18} />}
           type="search"
+          value={searchTerm}
+            onChange={handleSearchTermChange}
         />
-      </div>
+      </form>
       <div className="sm:flex flex-wrap gap-4 mx-2 md:mx-10">
         <Tabs
           aria-label="Options"
