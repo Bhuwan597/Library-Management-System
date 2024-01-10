@@ -207,7 +207,7 @@ const Footer = () => {
           <div className="mt-8 border-t border-gray-100 pt-8">
             <div className="sm:flex justify-center sm:justify-between">
               <p className="text-sm text-center text-gray-500">
-                &copy; 2024. Akhil KranitKari. All rights reserved.
+                &copy; 2024. Akhil KrantiKari. All rights reserved.
               </p>
 
               <ul className="mt-8 flex flex-wrap justify-center gap-4 text-xs sm:mt-0 lg:justify-end">
