@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Chip, Input, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
+import React, { useEffect, useRef, useState } from "react";
+import { Chip, Input, Tab, Tabs } from "@nextui-org/react";
 import { FaSearch } from "react-icons/fa";
 import {useRouter} from "next/navigation";
 import { useDebounce } from "use-debounce";
 
-const BooksTabsAndSearchbar = () => {
-  const [bookCategory, setBookCategory] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
+const BooksTabsAndSearchbar = ({search, type}) => {
+  const [bookCategory, setBookCategory] = useState(type|| '')
+  const [searchQuery, setSearchQuery] = useState(search || '')
   const [queryDebounced] = useDebounce(searchQuery, 500);
   const [bookCategoryDebounced] = useDebounce(bookCategory, 500);
   const router = useRouter();
@@ -22,11 +22,21 @@ const BooksTabsAndSearchbar = () => {
     setBookCategory(value)
   };
 
+  const initialRender = useRef(true)
     useEffect(() => {
+      if(initialRender.current){
+        initialRender.current = false;
+        console.log('Initial render done')
+        return
+      }
       if(!queryDebounced && !bookCategoryDebounced){
         return router.push('/books')
       }
-      return router.push(`/books?search=${queryDebounced}&type=${bookCategoryDebounced}`)
+      let queryString = `/books?search=${queryDebounced}`;
+      if (bookCategoryDebounced) {
+        queryString += `&type=${bookCategoryDebounced}`;
+      }
+      return router.push(queryString)
     }, [queryDebounced, bookCategoryDebounced, router])
     
 
@@ -42,6 +52,8 @@ const BooksTabsAndSearchbar = () => {
           value={searchQuery}
           onChange={(e)=>setSearchQuery(e.target.value)}
         />
+        {type}
+        {search}
       </div>
       <div className="sm:flex flex-wrap gap-4 mx-2 md:mx-10">
         <Tabs
@@ -57,6 +69,7 @@ const BooksTabsAndSearchbar = () => {
           }}
           className="flex flex-wrap"
           onSelectionChange={handleCategorySelection}
+          selectedKey={bookCategory}
         >
           {categories?.map((category, index) => {
             return (
@@ -70,6 +83,7 @@ const BooksTabsAndSearchbar = () => {
                     </Chip>
                   </div>
                 }
+                selected={bookCategory === category.value}
               />
             );
           })}
