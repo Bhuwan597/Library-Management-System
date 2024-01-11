@@ -20,6 +20,7 @@ const BooksTabsAndSearchbar = ({search, type}) => {
   ];
   const handleCategorySelection = (value) => {
     setBookCategory(value)
+
   };
 
   const initialRender = useRef(true)
