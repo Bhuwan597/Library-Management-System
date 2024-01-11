@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useEffect } from "react";
+import React, { useEffect , useRef} from "react";
 import { motion, useAnimation } from "framer-motion";
 import { fadeInDown } from "react-animations/lib/fade-in-down";
 import { tada } from "react-animations/lib/tada";
 import { fadeIn } from "react-animations/lib/fade-in";
 import Link from "next/link";
+
 
 const About = () => {
     const containerAnimation = useAnimation();
@@ -13,14 +14,27 @@ const About = () => {
     const iconAnimation = useAnimation();
 
     const startAnimations = async () => {
-        await containerAnimation.start({ opacity: 1, y: 0 });
-        await textAnimation.start({ opacity: 1, y: 0 });
-        await iconAnimation.start({ rotate: 360 });
+        await Promise.all([
+            containerAnimation.start({ opacity: 1, y: 0 }),
+            textAnimation.start({ opacity: 1, y: 0 }),
+            iconAnimation.start({ rotate: 360 }),
+        ]);
     };
 
+    const isMounted = useRef(true);
+
     useEffect(() => {
-        startAnimations();
-    }, []);
+        const initAnimations = async () => {
+            await startAnimations();
+        };
+
+        initAnimations();
+
+
+        return () => {
+            isMounted.current = false;
+        };
+    }, [startAnimations]);
 
     return (
         <motion.div
