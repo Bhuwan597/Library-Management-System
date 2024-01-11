@@ -38,7 +38,7 @@ const BooksTabsAndSearchbar = ({search, type}) => {
       }
       return router.push(queryString)
     }, [queryDebounced, bookCategoryDebounced, router])
-    
+
 
   return (
     <>
@@ -52,8 +52,6 @@ const BooksTabsAndSearchbar = ({search, type}) => {
           value={searchQuery}
           onChange={(e)=>setSearchQuery(e.target.value)}
         />
-        {type}
-        {search}
       </div>
       <div className="sm:flex flex-wrap gap-4 mx-2 md:mx-10">
         <Tabs
