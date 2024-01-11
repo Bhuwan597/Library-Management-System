@@ -54,6 +54,8 @@ const BooksTabsAndSearchbar = ({search, type}) => {
           onChange={(e)=>setSearchQuery(e.target.value)}
         />
       </div>
+
+
       <div className="sm:flex flex-wrap gap-4 mx-2 md:mx-10">
         <Tabs
           aria-label="Options"
@@ -70,7 +72,7 @@ const BooksTabsAndSearchbar = ({search, type}) => {
           onSelectionChange={handleCategorySelection}
           selectedKey={bookCategory}
         >
-          {categories?.map((category, index) => {
+          {categories?.map((category) => {
             return (
               <Tab
                 key={category.value}
