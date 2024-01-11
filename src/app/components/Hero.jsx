@@ -36,10 +36,10 @@ const Hero = () => {
 
 
     return (
-        <div className="flex flex-col gap-2 w-full max-w-[90%] mx-auto items-center sm:max-w-xl lg:max-w-2xl">
+        <div className="flex flex-col gap-2 w-full max-w-[90%] mx-auto items-center sm:max-w-xl lg:max-w-2xl relative">
             <form
                 onSubmit={handleSubmit}
-                className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 px-5 py-3 rounded-full hover:shadow-md focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl relative"
+                className="flex w-full mt-5 mx-auto max-w-[90%] border border-gray-200 px-5 py-3 rounded-full hover:shadow-md focus-within:shadow-md transition-shadow sm:max-w-xl lg:max-w-2xl relative z-10"
             >
                 <AiOutlineSearch className="text-xl text-gray-500 mr-3"/>
                 <input
@@ -50,7 +50,7 @@ const Hero = () => {
                     onChange={handleInputChange}
                 />
                 {input && suggestions.length > 0 && (
-                    <ul className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md max-h-40 overflow-y-auto">
+                    <ul className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md max-h-32 overflow-y-auto z-20">
                         {suggestions.map((book, index) => (
                             <li
                                 key={index}
@@ -62,14 +62,15 @@ const Hero = () => {
                                     <p className="text-gray-500 text-sm">{`By ${book.author}`}</p>
                                 </Link>
                             </li>
-                            ))}
+                        ))}
                     </ul>
-                    )}
+                )}
 
                 {input && suggestions.length === 0 && (
-                    <p className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md p-2 text-gray-500 text-sm">
+                    <p className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md p-2 text-gray-500 text-sm z-20">
                         No suggestions found.
-                    </p>)}
+                    </p>
+                )}
             </form>
             <p className="text-center text-xs text-red-500 w-full mx-auto">
                 Search by book title, author name, and genre.
@@ -77,5 +78,4 @@ const Hero = () => {
         </div>
     );
 };
-
 export default Hero;
