@@ -5,6 +5,7 @@ import {AiOutlineSearch, AiOutlineBook} from "react-icons/ai";
 import {Books} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
+import {FaBookOpen} from "react-icons/fa";
 
 
 const Hero = () => {
@@ -56,7 +57,7 @@ const Hero = () => {
                                 key={index}
                                 className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                             >
-                                <AiOutlineBook className="text-xl text-gray-500 mr-3"/>
+                                <FaBookOpen className="text-xl text-gray-500 mr-3"/>
                                 <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
                                     <p>{book.title}</p>
                                     <p className="text-gray-500 text-sm">{`By ${book.author}`}</p>
