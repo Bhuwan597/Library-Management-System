@@ -1,10 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Chip, Input, Select, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import { FaSearch } from "react-icons/fa";
 import {useRouter} from "next/navigation";
+import { useDebounce } from "use-debounce";
 
 const BooksTabsAndSearchbar = () => {
+  const [bookCategory, setBookCategory] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [queryDebounced] = useDebounce(searchQuery, 500);
+  const [bookCategoryDebounced] = useDebounce(bookCategory, 500);
+  const router = useRouter();
   const categories = [
     { label: "All", value: "" },
     { label: "Motivational", value: "motivational" },
@@ -13,35 +19,30 @@ const BooksTabsAndSearchbar = () => {
     { label: "Poem", value: "poem" },
   ];
   const handleCategorySelection = (value) => {
-    console.log(value);
-
-
+    setBookCategory(value)
   };
-  const router = useRouter();
 
-  const [searchTerm, setSearchTerm] = React.useState("");
-    const handleSearchTermChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if(!searchTerm) return;
-        router.push(`/search/${searchTerm}`);
-    }
+    useEffect(() => {
+      if(!queryDebounced && !bookCategoryDebounced){
+        return router.push('/books')
+      }
+      return router.push(`/books?search=${queryDebounced}&type=${bookCategoryDebounced}`)
+    }, [queryDebounced, bookCategoryDebounced, router])
+    
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex md:justify-end px-4 my-10 gap-2 w-full">
+      <div className="flex md:justify-end px-4 my-10 gap-2 w-full">
         <Input
           className="h-full font-normal text-default-500 text-small rounded-lg md:w-1/2 lg:w-1/3"
           placeholder="Type to search..."
           size="sm"
           startContent={<FaSearch size={18} />}
           type="search"
-          value={searchTerm}
-            onChange={handleSearchTermChange}
+          value={searchQuery}
+          onChange={(e)=>setSearchQuery(e.target.value)}
         />
-      </form>
+      </div>
       <div className="sm:flex flex-wrap gap-4 mx-2 md:mx-10">
         <Tabs
           aria-label="Options"
