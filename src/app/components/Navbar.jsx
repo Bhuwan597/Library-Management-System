@@ -70,7 +70,7 @@ const NavbarComponent = () => {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
-                    <Link className="text-white" href='/login'>
+                    <Link className={`${pathname === '/login' ? 'text-white underline underline-offset-8' : "text-white"}`} href='/login'>
                         Login
                     </Link>
                 </NavbarItem>
