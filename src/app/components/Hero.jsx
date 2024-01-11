@@ -1,17 +1,20 @@
 'use client';
 import React from "react";
 
-import {AiOutlineSearch, AiOutlineBook} from "react-icons/ai";
+import {AiOutlineSearch} from "react-icons/ai";
 import {Books} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import {FaBookOpen} from "react-icons/fa";
 
 
+// ... (previous imports)
+
 const Hero = () => {
     const router = useRouter();
     const [input, setInput] = React.useState("");
     const [suggestions, setSuggestions] = React.useState([]);
+    const suggestionsRef = React.useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,6 +38,19 @@ const Hero = () => {
         }
     };
 
+    const handleClickOutside = (e) => {
+        if (suggestionsRef.current && !suggestionsRef.current.contains(e.target)) {
+            setSuggestions([]);
+        }
+    };
+
+    React.useEffect(() => {
+        document.addEventListener("click", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="flex flex-col gap-2 w-full max-w-[90%] mx-auto items-center sm:max-w-xl lg:max-w-2xl relative">
@@ -51,8 +67,11 @@ const Hero = () => {
                     onChange={handleInputChange}
                 />
                 {input && suggestions.length > 0 && (
-                    <ul className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md max-h-32 overflow-y-auto z-20">
-                        {suggestions.map((book, index) => (
+                    <ul
+                        ref={suggestionsRef}
+                        className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md max-h-32 overflow-y-auto z-20"
+                    >
+                        {suggestions.slice(0, 5).map((book, index) => (
                             <li
                                 key={index}
                                 className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
@@ -66,12 +85,6 @@ const Hero = () => {
                         ))}
                     </ul>
                 )}
-
-                {input && suggestions.length === 0 && (
-                    <p className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md p-2 text-gray-500 text-sm z-20">
-                        No suggestions found.
-                    </p>
-                )}
             </form>
             <p className="text-center text-xs text-red-500 w-full mx-auto">
                 Search by book title, author name, and genre.
@@ -79,4 +92,5 @@ const Hero = () => {
         </div>
     );
 };
+
 export default Hero;
