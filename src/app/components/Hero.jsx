@@ -57,7 +57,7 @@ const Hero = () => {
                                 className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                             >
                                 <AiOutlineBook className="text-xl text-gray-500 mr-3"/>
-                                <Link href={`/books/${book.slug}`}>
+                                <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
                                     <p>{book.title}</p>
                                     <p className="text-gray-500 text-sm">{`By ${book.author}`}</p>
                                 </Link>
