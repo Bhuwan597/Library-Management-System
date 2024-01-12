@@ -15,7 +15,6 @@ const Hero = () => {
         const [showList, setShowList] = useState(false);
         const [domLoaded, setDomLoaded] = useState(false);
 
-
         const handleSubmit = (e) => {
             e.preventDefault();
             if (!input) {

@@ -9,7 +9,7 @@ const Testimonials = () => {
             <div className="container mx-auto my-10 px-4">
                 <div className="text-center mb-8">
                     <p className="text-sm text-red-500">Reviews and Thoughts</p>
-                    <h2 className="text-3xl md:text-4xl font-bold">What People are saying</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold">What Students are saying</h2>
                     <Divider/>
                 </div>
 
