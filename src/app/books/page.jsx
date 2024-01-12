@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import {Books} from '../data/BooksData';
+import {bookDatas} from '../data/BooksData';
 import BooksTabsAndSearchbar from "../components/partials/BooksTabsAndSearchbar";
 import Bookcard from "../components/partials/Bookcard";
 
@@ -9,8 +9,8 @@ const BooksPage = async ({searchParams}) => {
     const lowercaseSearch = searchQueries?.search?.toLowerCase();
 
     const booksData = lowercaseSearch
-        ? Books.filter((book) => book.title.toLowerCase().includes(lowercaseSearch))
-        : Books;
+        ? bookDatas.filter((book) => book.title.toLowerCase().includes(lowercaseSearch))
+        : bookDatas;
 
     return (
         <>
@@ -30,8 +30,6 @@ const BooksPage = async ({searchParams}) => {
 
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 my-10">
-
-
 
 
                 {booksData.map((book, index) => (

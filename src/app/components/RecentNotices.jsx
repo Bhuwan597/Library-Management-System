@@ -1,74 +1,11 @@
 import React from "react";
 import NoticeCard from "./partials/NoticeCard";
-import { FaBullhorn } from "react-icons/fa";
+import {FaBullhorn} from "react-icons/fa";
 import Link from "next/link";
+import {newsAndNotices} from "@/app/data/NewsAndNoticesData";
 
 const RecentNotices = () => {
-    let newsAndNotices = [
-        {
-            title: "New Books on Library",
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
 
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-        {
-            title: "New Books on Library",
-
-            publishedDate: "13-01-2022",
-            category: "Information",
-            description:
-                "Excited to inform all of you about our newly arrivals books in the library. Hope all of you all are excited to read out all our new collections. Have a good day readers.",
-        },
-    ];
     return (
         <div className="container mt-10 mx-auto md:px-6 mb-20">
             <div className="text-center mb-8">
@@ -78,7 +15,7 @@ const RecentNotices = () => {
                 </h2>
             </div>
             <section className=" text-center md:text-left mt-5 grid grid-cols-1 md:grid-cols-2">
-                {newsAndNotices?.map((n, index) => {
+                {newsAndNotices?.slice(0, 4).map((n, index) => {
                     return (
                         <NoticeCard
                             key={index + 1}
@@ -90,12 +27,12 @@ const RecentNotices = () => {
                     );
                 })}
             </section>
-            <div className="mt-8 text-center">
-                    <Link href="/notices"   className="font-semibold leading-6 text-red-600 hover:text-red-500 " >
+            <div className="mt-4 text-center">
+                <Link href="/notices" className="font-semibold leading-6 text-red-600 hover:text-red-500 ">
                     <span className='underline'>View All Notices</span>
-                        <FaBullhorn className="inline-block ml-2 text-xl text-red-400 pointer-events-none flex-shrink-0"/>
-                    </Link>
-                </div>
+                    <FaBullhorn className="inline-block ml-2 text-xl text-red-400 pointer-events-none flex-shrink-0"/>
+                </Link>
+            </div>
         </div>
     );
 };

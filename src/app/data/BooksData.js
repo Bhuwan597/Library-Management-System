@@ -1,4 +1,4 @@
-const Books = [
+export const bookDatas = [
     {
       title: "Think and Grow Rich",
       author: "Napolean Hill",
@@ -324,5 +324,3 @@ const Books = [
       type: 'motivational'
     },
   ];
-
-module.exports = {Books}
