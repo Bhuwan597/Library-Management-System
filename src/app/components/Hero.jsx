@@ -75,7 +75,7 @@ const Hero = () => {
                         {showList && suggestions.length > 0 && (
                             <ul
                                 ref={suggestionsRef}
-                                className="absolute mt-8 left-0 right-0  bg-white border border-gray-200 rounded-md shadow-md max-h-32 overflow-y-auto z-20"
+                                className="absolute mt-8 left-0 right-0 bg-white border border-gray-200 rounded-xl shadow-md max-h-32 overflow-y-auto z-20"
                             >
                                 {suggestions.slice(0, 5).map((book, index) => (
                                     <li
@@ -83,17 +83,21 @@ const Hero = () => {
                                         className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                                     >
                                         <FaBookOpen className="text-xl text-gray-500 mr-3"/>
-                                        <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
-                                            <p>{book.title}</p>
+                                        <div className="flex flex-col">
+                                            <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
+                                                <p className="text-blue-500">{book.title}</p>
+                                            </Link>
                                             <p className="text-gray-500 text-sm">{`By ${book.author}`}</p>
-                                        </Link>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>
+
                         )}
 
                         {showList && input && suggestions.length === 0 && (
                             <div
+                                ref={suggestionsRef}
                                 className="absolute mt-8 left-0 right-0 bg-white border border-gray-200 rounded-md shadow-md p-2 text-gray-500 z-20">
                                 No suggestions found.
                             </div>
