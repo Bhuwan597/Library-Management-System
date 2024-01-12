@@ -2,7 +2,7 @@
 import React, {useEffect, useRef, useState} from "react";
 
 import {AiOutlineSearch} from "react-icons/ai";
-import {Books} from './../data/BooksData';
+import {bookDatas} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import {FaBookOpen} from "react-icons/fa";
@@ -30,7 +30,7 @@ const Hero = () => {
 
             setShowList(true);
 
-            const filteredSuggestions = Books.filter((book) =>
+            const filteredSuggestions = bookDatas.filter((book) =>
                 book.title.toLowerCase().includes(input.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
