@@ -48,10 +48,10 @@ const Hero = () => {
                 }
             };
 
-            document.addEventListener("click", handler);
+            document.addEventListener("mousedown", handler);
 
             return () => {
-                document.removeEventListener("click", handler);
+                document.removeEventListener("mousedown", handler);
             };
         }, []);
 
