@@ -30,7 +30,7 @@ const Hero = () => {
             setShowList(true);
 
             const filteredSuggestions = bookDatas.filter((book) =>
-                book.title.toLowerCase().includes(input.toLowerCase())
+                book.title.toLowerCase().includes(input.toLowerCase()) || book.author.toLowerCase().includes(input.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
         }, [input]);
@@ -81,12 +81,12 @@ const Hero = () => {
                                         key={index}
                                         className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                                     >
-                                        <FaBookOpen className="text-xl text-gray-500 mr-3"/>
+                                        <FaBookOpen className="text-xl text-red-500 mr-3"/>
                                         <div className="flex flex-col">
                                             <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
-                                                <p className="text-blue-500">{book.title}</p>
+                                                <p className="text-red-600">{book.title}</p>
                                             </Link>
-                                            <p className="text-gray-500 text-sm">{`By ${book.author}`}</p>
+                                            <p className="text-red-400 text-sm">{`By ${book.author}`}</p>
                                         </div>
                                     </li>
                                 ))}
