@@ -27,8 +27,9 @@ const SingleBookImage = ({ images }) => {
           src={images.front}
           onClick={() => handleImageClick(images.front)} 
           className={`cursor-pointer hover:border-1 border-1 ${(imageSrc === images?.front) ? 'border-red-600' : 'border-white' } hover:border-red-600 ease-in-out duration-100`}
-        />
+         alt={'FRONT'}/>
         <Image
+            alt={'BACK'}
           width={50}
           height={10}
           onClick={() => handleImageClick(images.back)}

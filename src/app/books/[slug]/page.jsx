@@ -1,5 +1,4 @@
 import RequestBook from "@/app/components/partials/RequestBook";
-import Image from "next/image";
 import React from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import SingleBookImage from "@/app/components/partials/SingleBookImage";
@@ -29,7 +28,7 @@ const BookSlugPage = ({ params }) => {
   };
   return (
     <>
-      <section className="text-gray-600 body-font overflow-hidden">
+      <section className="text-gray-600 body-font overflow-hidden bg-gray-100" >
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap justify-center items-center drop-shadow-xl">
             <SingleBookImage images={bookData.images} />
