@@ -103,7 +103,7 @@ const Hero = () => {
                         )}
                     </form>
                     <p className="text-center text-xs text-red-500 w-full mx-auto">
-                        Search by book title, author name, and genre.
+                        Search by book title or author name.
                     </p>
                 </div>}
 
