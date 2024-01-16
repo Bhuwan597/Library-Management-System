@@ -74,7 +74,7 @@ const Hero = () => {
                         {showList && suggestions.length > 0 && (
                             <ul
                                 ref={suggestionsRef}
-                                className="absolute mt-8 left-0 right-0 bg-white border border-gray-200 rounded-xl shadow-md max-h-32 overflow-y-auto z-20"
+                                className="absolute mt-8 left-0 right-0 bg-white border border-gray-200 rounded-xl shadow-md max-h-60 overflow-y-auto z-20"
                             >
                                 {suggestions.slice(0, 5).map((book, index) => (
                                     <li
