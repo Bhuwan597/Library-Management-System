@@ -6,10 +6,10 @@ import { FaArrowRight } from "react-icons/fa";
 const Bookcard = ({ imageSrc, title, author, slug }) => {
   return (
     <Card className="py-4 mx-3 h-auto ">
-      <CardBody className="overflow-visible py-2 flex flex-col justify-center items-center">
+      <CardBody className="py-2 flex flex-col justify-center items-center overflow-hidden">
         <Image
           alt="Card background"
-          className="object-fit rounded-xl h-60 min-w-full"
+          className="object-fit rounded-xl h-60 min-w-full hover:scale-110 ease-in-out duration-300"
           src={imageSrc}
         />
       </CardBody>
