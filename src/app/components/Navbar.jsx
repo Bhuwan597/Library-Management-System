@@ -43,13 +43,13 @@ const NavbarComponent = () => {
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem isActive={pathname === '/books'}>
                     <Link href="/books" aria-current="page"
-                          className={`${pathname === '/books' ? 'text-white underline underline-offset-8' : "text-white"}`}>
+                          className={`${pathname.startsWith('/books') ? 'text-white underline underline-offset-8' : "text-white"}`}>
                         Books
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive={pathname === '/notices'}>
                     <Link href="/notices" aria-current="page"
-                          className={`${pathname === '/notices' ? 'text-white underline underline-offset-8' : "text-white"}`}>
+                          className={`${pathname.startsWith('/notices') ? 'text-white underline underline-offset-8' : "text-white"}`}>
                         Notices
                     </Link>
                 </NavbarItem>
