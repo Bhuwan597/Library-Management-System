@@ -77,18 +77,18 @@ const Hero = () => {
                                 className="absolute mt-8 left-0 right-0 bg-white border border-gray-200 rounded-xl shadow-md max-h-60 overflow-y-auto z-20"
                             >
                                 {suggestions.slice(0, 5).map((book, index) => (
-                                    <li
-                                        key={index}
-                                        className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
+                                    <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}
+                                          key={index}
+                                          className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                                     >
                                         <FaBookOpen className="text-xl text-red-500 mr-3"/>
                                         <div className="flex flex-col">
-                                            <Link href={`/books/${book.title.toLowerCase().replace(/\s+/g, '')}`}>
-                                                <p className="text-red-600">{book.title}</p>
-                                            </Link>
+
+                                            <p className="text-red-600">{book.title}</p>
+
                                             <p className="text-red-400 text-sm">{`By ${book.author}`}</p>
                                         </div>
-                                    </li>
+                                    </Link>
                                 ))}
                             </ul>
 
