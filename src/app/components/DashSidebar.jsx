@@ -10,26 +10,25 @@ const DashSidebar = () => {
     const pathname = usePathname();
     return (
 
-
-        <Sidebar>
-            <Sidebar.Logo href="#" img="/favicon.ico" imgAlt="KrantiKari logo">
+        <Sidebar className='w-full md:w-56'>
+            <Sidebar.Logo href="/" img="/favicon.ico" imgAlt="KrantiKari logo">
                 KrantiKari Library
             </Sidebar.Logo>
 
 
             <Sidebar.Items>
-                <Sidebar.ItemGroup>
+                <Sidebar.ItemGroup className='flex flex-col gap-1'>
                     <Sidebar.Item active={pathname === '/profile'} href="/profile" icon={FaUser} label="User"
                                   labelColor="red">
                         Profile
                     </Sidebar.Item>
 
-                    <Sidebar.Item  active={pathname === '/dashboard'}  href="/dashboard" icon={HiChartPie}>
+                    <Sidebar.Item active={pathname === '/dashboard'} href="/dashboard" icon={HiChartPie}>
                         Dashboard
                     </Sidebar.Item>
 
 
-                    <Sidebar.Item  href="#" icon={FaSignOutAlt}>
+                    <Sidebar.Item href="#" icon={FaSignOutAlt}>
                         Sign Out
                     </Sidebar.Item>
                 </Sidebar.ItemGroup>
