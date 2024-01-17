@@ -7,6 +7,7 @@ const DashboardPage = () => {
             <div className='md:w-56'>
                 <DashSidebar/>
             </div>
+            <h2>Dashboard Page</h2>
         </div>
     );
 };

@@ -7,6 +7,7 @@ const ProfilePage = () => {
                 <div className='md:w-56'>
                     <DashSidebar/>
                 </div>
+                <h1>Profile Page</h1>
             </div>
     );
 
