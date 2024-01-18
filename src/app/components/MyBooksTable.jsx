@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import {
   Table,
   TableHeader,
@@ -14,46 +14,34 @@ import {
   ModalContent,
   ModalFooter,
   ModalBody,
-  useDisclosure,
   ModalHeader,
-  Divider,
 } from "@nextui-org/react";
-import { myBooks } from "@/app/data/MyBooksData";
 import { FaEye } from "react-icons/fa";
+import { myBooks } from "@/app/data/MyBooksData";
 
 const MyBooksTable = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [selectedBook, setSelectedBook] = useState(null);
+
+  const openModal = (book) => {
+    setSelectedBook(book);
+  };
+
+  const closeModal = () => {
+    setSelectedBook(null);
+  };
+
   return (
     <>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal isOpen={!!selectedBook} onOpenChange={closeModal}>
         <ModalContent>
-          {(onClose) => (
+          {selectedBook && (
             <>
-              <ModalHeader className="flex flex-col gap-1">
-                Modal Title
-              </ModalHeader>
+              <ModalHeader>{selectedBook.title}</ModalHeader>
               <ModalBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat
-                  consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
-                  incididunt cillum quis. Velit duis sit officia eiusmod Lorem
-                  aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem
-                  eiusmod et. Culpa deserunt nostrud ad veniam.
-                </p>
+                <p>{selectedBook.description}</p>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="solid" onPress={onClose}>
+                <Button color="danger" variant="solid" onPress={closeModal}>
                   Close
                 </Button>
               </ModalFooter>
@@ -61,6 +49,7 @@ const MyBooksTable = () => {
           )}
         </ModalContent>
       </Modal>
+
       <Table>
         <TableHeader>
           <TableColumn>Book</TableColumn>
@@ -73,7 +62,7 @@ const MyBooksTable = () => {
             <TableRow key={book.id}>
               <TableCell>
                 <User
-                  name={"The power of your subconscious mind"}
+                  name={book.title}
                   description={book.author}
                   avatarProps={{
                     src: "./thinkandgrowrich.jpg",
@@ -88,7 +77,7 @@ const MyBooksTable = () => {
                 <Chip color="primary">Active</Chip>
               </TableCell>
               <TableCell>
-                <Button isIconOnly onPress={onOpen}>
+                <Button isIconOnly onClick={() => openModal(book)}>
                   <FaEye />
                 </Button>
               </TableCell>
