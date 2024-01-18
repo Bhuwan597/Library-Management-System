@@ -1,7 +1,7 @@
 import React from "react";
 import MyBooksTable from "../components/MyBooksTable";
 
-const Page = () => {
+const MyBooksPage = () => {
   return (
     <>
       <div className="flex justify-center items-center min-h-screen">
@@ -13,4 +13,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default MyBooksPage;
