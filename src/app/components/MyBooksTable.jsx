@@ -18,7 +18,7 @@ import {
 import {FaEye} from "react-icons/fa";
 import {myBooks} from "@/app/data/MyBooksData";
 import Image from "next/image";
-import { FaBook, FaCalendarAlt, FaCalendarCheck, FaTimes } from 'react-icons/fa';
+import {FaBook, FaCalendarAlt, FaCalendarCheck, FaTimes} from 'react-icons/fa';
 
 
 const MyBooksTable = () => {
@@ -40,21 +40,24 @@ const MyBooksTable = () => {
                     {selectedBook && (
                         <>
                             <ModalHeader className="text-4xl font-bold mb-4 border-b pb-2 text-gray-800">
-                                <FaBook className="mr-2" /> {selectedBook.title}
+                                <FaBook className="mr-2"/> {selectedBook.title}
                             </ModalHeader>
                             <ModalBody className="mb-4 text-gray-700">
                                 <div className="mt-4">
                                     <p className="text-lg flex items-center">
-                                        <FaCalendarAlt className="mr-2" />
-                                        <span className="font-semibold text-gray-800">Author:</span> {selectedBook.author}
+                                        <FaCalendarAlt className="mr-2"/>
+                                        <span
+                                            className="font-semibold text-gray-800">Author:</span> {selectedBook.author}
                                     </p>
                                     <p className="text-lg flex items-center">
-                                        <FaCalendarAlt className="mr-2" />
-                                        <span className="font-semibold text-gray-800">Borrowed Date:</span> {selectedBook.borrowDate}
+                                        <FaCalendarAlt className="mr-2"/>
+                                        <span
+                                            className="font-semibold text-gray-800">Borrowed Date:</span> {selectedBook.borrowDate}
                                     </p>
                                     <p className="text-lg flex items-center">
-                                        <FaCalendarCheck className="mr-2" />
-                                        <span className="font-semibold text-gray-800">Return Date:</span> {selectedBook.returnDate}
+                                        <FaCalendarCheck className="mr-2"/>
+                                        <span
+                                            className="font-semibold text-gray-800">Return Date:</span> {selectedBook.returnDate}
                                     </p>
                                 </div>
                             </ModalBody>
@@ -65,7 +68,7 @@ const MyBooksTable = () => {
                                     onPress={closeModal}
                                     className="px-6 py-2 bg-red-500 text-white hover:bg-red-600 transition flex items-center"
                                 >
-                                    <FaTimes className="mr-2" />
+                                    <FaTimes className="mr-2"/>
                                     Close
                                 </Button>
                             </ModalFooter>
@@ -79,13 +82,13 @@ const MyBooksTable = () => {
                     <TableColumn className="py-3 px-4 text-lg font-semibold text-center">Status</TableColumn>
                     <TableColumn className="py-3 px-4 text-lg font-semibold text-center">Actions</TableColumn>
                 </TableHeader>
-                <TableBody>
+                <TableBody emptyContent={"No Books to Display!!!"}>
                     {myBooks.map((book) => (
                         <TableRow key={book.id} className="hover:bg-gray-50 transition duration-300 ease-in-out">
                             <TableCell className="py-3 px-4">
                                 <div className="flex items-center">
                                     <Image src={book.image_url} height='40' width='40' alt={book.title}
-                                           className="rounded-full mr-4"/>
+                                           className="rounded mr-4"/>
                                     <div>
                                         <p className="text-lg font-medium">{book.title}</p>
                                         <p className="text-gray-500">{book.author}</p>
