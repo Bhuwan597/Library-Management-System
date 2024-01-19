@@ -21,19 +21,27 @@ const ProfilePageForm = () => {
     const isInvalidPassword = React.useMemo(() => {
         return formData?.newPassword !== formData?.confirmNewPassword;
     }, [formData?.newPassword, formData?.confirmNewPassword]);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Check if there are password errors before submitting
+        if (formData.newPassword === formData.currentPassword) {
+            setSuccessMessage('');
+            setErrorMessage("New password cannot be the same as the old password!!!");
+            setTimeout(() => {
+                setErrorMessage('');
+            }, 3000);
+            return;
+        }
+
         if (isInvalidPassword) {
             return;
         }
 
-        // Simulate API call delay
         setSuccessMessage("Profile Updated Successfully!");
         setTimeout(() => {
-            setSuccessMessage('')
+            setSuccessMessage('');
         }, 3000);
     };
 
@@ -56,6 +64,7 @@ const ProfilePageForm = () => {
                 name="email"
                 autoComplete="email"
                 value={formData.email}
+                onChange={handleChange}
                 type="email"
                 label="Email"
                 disabled
@@ -67,7 +76,9 @@ const ProfilePageForm = () => {
         <div className="mt-1">
             <Input
                 isRequired
+                onChange={handleChange}
                 name="currentPassword"
+                value={formData.currentPassword}
                 type='password'
                 autoComplete="current-password"
                 label="Current Password"
@@ -86,6 +97,7 @@ const ProfilePageForm = () => {
                 label="New Password"
                 onChange={handleChange}
                 isInvalid={isInvalidPassword}
+                value={formData.newPassword}
                 color={
                     isInvalidPassword
                         ? "danger"
@@ -108,6 +120,7 @@ const ProfilePageForm = () => {
                 label="Confirm New Password"
                 type='password'
                 onChange={handleChange}
+                value={formData.confirmNewPassword}
                 isInvalid={isInvalidPassword}
                 color={
                     isInvalidPassword
@@ -124,12 +137,13 @@ const ProfilePageForm = () => {
 
 
         <p className="text-sm text-gray-500 mb-2 italic">Note: You can change your name and password.</p>
-
+        {errorMessage && (<p className="text-red-500 text-center">{errorMessage}</p>)}
         {successMessage && (<p className="text-green-500 text-center">{successMessage}</p>)}
+
 
         <div className="mt-1">
             <Button
-                isDisabled={!(!isInvalidPassword)}
+                isDisabled={!(!isInvalidPassword) || !!successMessage || !!errorMessage}
                 type={!isInvalidPassword ? "submit" : "button"}
                 className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >

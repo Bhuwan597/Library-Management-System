@@ -5,7 +5,7 @@ import {AiOutlineSearch} from "react-icons/ai";
 import {bookDatas} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
-import {FaBook, FaBookOpen} from "react-icons/fa";
+import {FaBook} from "react-icons/fa";
 
 const Hero = () => {
         const router = useRouter();

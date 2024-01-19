@@ -15,7 +15,11 @@ export const myBooks = [{
     image_url: "/thepowerofpositivethinking.jpg",
     author: "Norman Vincent Peale",
     borrowDate: "2024-01-02",
-
-}
+}, {
+    title: "Summer Love",
+    image_url: "/summerlove.jpg",
+    author: "Subin Bhattarai",
+    borrowDate: "2024-01-19",
+},
 
 ]
