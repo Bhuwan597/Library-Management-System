@@ -12,9 +12,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "PhirPhire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -30,9 +30,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {
@@ -66,9 +66,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "Phirphire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -84,9 +84,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {
@@ -120,9 +120,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "Phirphire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -138,9 +138,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {
@@ -174,9 +174,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "Phirphire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -192,9 +192,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {
@@ -228,9 +228,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "Phirphire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -246,9 +246,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {
@@ -282,9 +282,9 @@ export const bookDatas = [
       type: 'nepali'
     },
     {
-      title: "FirFire",
+      title: "Phirphire",
       author: "BuddhiSagar",
-      imageSrc: "/firfire.jpg",
+      imageSrc: "/phirphire.jpg",
       type: 'nepali'
     },
     {
@@ -300,9 +300,9 @@ export const bookDatas = [
       type: 'novel'
     },
     {
-      title: "Fatsungh",
+      title: "Faatsung",
       author: "Chuden Kabimo",
-      imageSrc: "/fatsungh.jpg",
+      imageSrc: "/faatsung.jpg",
       type: 'nepali'
     },
     {

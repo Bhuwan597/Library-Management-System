@@ -1,6 +1,6 @@
 export const myBooks = [{
-    title: "Firfire",
-    image_url: "/firfire.jpg",
+    title: "PhirPhire",
+    image_url: "/phirphire.jpg",
     author: "BuddhiSagar",
     borrowDate: "2024-01-05",
 
