@@ -5,7 +5,7 @@ import {AiOutlineSearch} from "react-icons/ai";
 import {bookDatas} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
-import {FaBookOpen} from "react-icons/fa";
+import {FaBook, FaBookOpen} from "react-icons/fa";
 
 const Hero = () => {
         const router = useRouter();
@@ -81,7 +81,7 @@ const Hero = () => {
                                           key={index}
                                           className="p-2 cursor-pointer flex items-center font-semibold hover:bg-gray-100"
                                     >
-                                        <FaBookOpen className="text-xl text-red-500 mr-3"/>
+                                        <FaBook className="text-xl text-red-500 mr-3"/>
                                         <div className="flex flex-col">
 
                                             <p className="text-red-600">{book.title}</p>
