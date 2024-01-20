@@ -26,8 +26,7 @@ import {
     FaCalendarCheck,
     FaCheckCircle,
     FaDotCircle,
-    FaEllipsisV,
-    FaEye,
+
     FaInfoCircle,
     FaTimes,
     FaUserAlt,
