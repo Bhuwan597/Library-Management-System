@@ -29,7 +29,17 @@ const NavbarComponent = () => {
     if (pathname.startsWith('/admin')) return
     return (
         <>
-            <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="bg-red-600">
+            <Navbar
+                onMenuOpenChange={setIsMenuOpen}
+                isBordered
+                className="bg-red-600 shadow-md text-white"
+                style={{
+                    borderBottomLeftRadius: '10px',
+                    borderBottomRightRadius: '10px',
+                    borderTopLeftRadius: '0',
+                    borderTopRightRadius: '0',
+                }}
+            >
                 <NavbarContent className="text-white">
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
