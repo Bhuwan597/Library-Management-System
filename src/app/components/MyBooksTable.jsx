@@ -21,21 +21,16 @@ import {
     TableRow,
 } from "@nextui-org/react";
 import {
-    FaBook,
-    FaCalendarAlt,
-    FaCalendarCheck,
-    FaCheckCircle,
-    FaDotCircle,
+    FaBook, FaCalendarAlt, FaCalendarCheck, FaCheckCircle, FaDotCircle,
 
-    FaInfoCircle,
-    FaTimes,
-    FaUserAlt,
+    FaInfoCircle, FaTimes, FaUserAlt,
 } from "react-icons/fa";
 import {myBooks} from "@/app/data/MyBooksData";
 import Image from "next/image";
 import {HiDotsVertical} from "react-icons/hi";
 import {GiReturnArrow} from "react-icons/gi";
 import {MdCancel} from "react-icons/md";
+import {FcCancel} from "react-icons/fc";
 
 const MyBooksTable = () => {
     const [selectedBook, setSelectedBook] = useState(null);
@@ -190,7 +185,8 @@ const MyBooksTable = () => {
                     <TableCell className="py-3 px-4 text-lg text-center">
                         <Chip
                             startContent={book.requested ? (
-                                <FaDotCircle/>) : (isReturnDatePastCurrentDate(calculateEndDate(book.borrowDate)) ? ("") : (
+                                <FaDotCircle/>) : (isReturnDatePastCurrentDate(calculateEndDate(book.borrowDate)) ? (
+                                <FcCancel/>) : (
                                 <FaCheckCircle/>))}
                             color={book.requested ? "warning" : isReturnDatePastCurrentDate(calculateEndDate(book.borrowDate)) ? "danger" : "success"}
                             variant={"flat"}
@@ -206,24 +202,26 @@ const MyBooksTable = () => {
                                 </Button>
                             </DropdownTrigger>
                             <DropdownMenu>
-                                <DropdownItem startContent={<FaInfoCircle
-                                    className='text-medium pointer-events-none flex-shrink-0 text-blue-500'/>}
-                                              onClick={() => openModal(book)}>
+                                {!book.requested && (<DropdownItem
+                                    startContent={<FaInfoCircle
+                                        className='text-medium pointer-events-none flex-shrink-0 text-blue-500'/>}
+                                    onClick={() => openModal(book)}>
                                     View Details
-                                </DropdownItem>
+                                </DropdownItem>)}
 
-                                {!book.requested && (<DropdownItem startContent={<GiReturnArrow
-                                    className='text-medium text-green-500 pointer-events-none flex-shrink-0 '/>}>
+                                {!book.requested && (<DropdownItem
+                                    startContent={<GiReturnArrow
+                                        className='text-medium text-green-500 pointer-events-none flex-shrink-0 '/>}>
                                     Return Book
                                 </DropdownItem>)}
 
-                                {book.requested && (
-                                    <DropdownItem startContent={<MdCancel
+                                {book.requested && (<DropdownItem
+                                    startContent={<MdCancel
                                         className='text-medium pointer-events-none flex-shrink-0 text-red-500'/>}
-                                                  key="delete"
-                                                  className="text-danger" color="danger">
-                                        Cancel Request
-                                    </DropdownItem>)}
+                                    key="delete"
+                                    className="text-danger" color="danger">
+                                    Cancel Request
+                                </DropdownItem>)}
                             </DropdownMenu>
 
                         </Dropdown>
