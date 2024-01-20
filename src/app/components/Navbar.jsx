@@ -26,8 +26,9 @@ import {
 const NavbarComponent = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+  if(pathname.startsWith('/admin')) return
   return (
+    <>
     <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="bg-red-600">
       <NavbarContent className="text-white">
         <NavbarMenuToggle
@@ -191,6 +192,7 @@ const NavbarComponent = () => {
         </DropdownMenu>
       </Dropdown>
     </Navbar>
+    </>
   );
 };
 
