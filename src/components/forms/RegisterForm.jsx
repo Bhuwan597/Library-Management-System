@@ -36,7 +36,7 @@ const RegisterForm = () => {
     const isInvalid = React.useMemo(() => {
         if (!emailTouched || formData?.email === "") return false;
         return !validateEmail(formData?.email);
-    }, [formData?.email]);
+    }, [emailTouched, formData?.email]);
 
     const isInvalidPassword = React.useMemo(() => {
         return formData?.password !== formData?.confirmPassword;
