@@ -1,13 +1,14 @@
-import Hero from "./components/Hero";
-import CarouselComponent from "@/app/components/Carousel";
-import NewArrivals from "@/app/components/NewArrivals";
-import RecommendedBooks from "@/app/components/RecommendedBooks";
-import RecentNotices from "./components/RecentNotices";
-import UpcomingBooks from "./components/UpcomingBooks";
-import Footer from "@/app/components/Footer";
-import Statistics from "./components/Statistics";
-import MessageFromPresident from "./components/MessageFromPresident";
-import Testimonials from "@/app/components/Testimonials";
+import Hero from "@/components/Hero";
+import UpcomingBooks from "@/components/UpcomingBooks";
+import CarouselComponent from "@/components/Carousel";
+import NewArrivals from "@/components/NewArrivals";
+import RecommendedBooks from "@/components/RecommendedBooks";
+import RecentNotices from "@/components/RecentNotices";
+import Statistics from "@/components/Statistics";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
+import MessageFromPresident from "@/components/MessageFromPresident";
+
 
 export default function Home() {
     return (

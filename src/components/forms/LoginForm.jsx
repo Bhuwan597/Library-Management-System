@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { Button, Input } from "@nextui-org/react";
 import { FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
-import ForgotModal from "@/app/components/partials/ForgotModal";
-
+import ForgotModal from "@/components/partials/ForgotModal";
 const LoginForm = () => {
     const [isVisible, setIsVisible] = React.useState(false);
 

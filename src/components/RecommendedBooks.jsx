@@ -1,9 +1,8 @@
 import React from 'react';
-import Bookcard from "@/app/components/partials/Bookcard";
 import {PiBooksBold} from "react-icons/pi";
 import Link from "next/link";
 import {bookDatas} from "@/app/data/BooksData";
-
+import Bookcard from "@/components/partials/Bookcard";
 const Books = () => {
 
     return (

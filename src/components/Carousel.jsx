@@ -2,8 +2,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ImageText from "@/app/components/partials/ImageText";
-
+import ImageText from "@/components/partials/ImageText";
 const CarouselComponent = () => {
   return (
     <div

@@ -1,7 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import {Button, Image} from "@nextui-org/react";
-import { FaArrowRight } from "react-icons/fa";
 
 const ImageText = ({ imageUrl, altText, displayText }) => {
   return (

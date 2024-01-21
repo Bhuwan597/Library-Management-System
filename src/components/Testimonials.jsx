@@ -1,8 +1,6 @@
 import React from 'react';
-
-import Divider from "@/app/components/partials/Divider";
-import TestimonialCards from "@/app/components/partials/TestimonialCards";
-
+import Divider from "@/components/partials/Divider";
+import TestimonialCards from "@/components/partials/TestimonialCards";
 const Testimonials = () => {
     return (
         <>

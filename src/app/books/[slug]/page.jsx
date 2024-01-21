@@ -1,10 +1,9 @@
-import RequestBook from "@/app/components/partials/RequestBook";
 import React from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import SingleBookImage from "@/app/components/partials/SingleBookImage";
-import Footer from "@/app/components/Footer";
-import Books from "@/app/components/RecommendedBooks";
-
+import Books from "@/components/RecommendedBooks";
+import Footer from "@/components/Footer";
+import SingleBookImage from "@/components/partials/SingleBookImage";
+import RequestBook from "@/components/partials/RequestBook";
 const BookSlugPage = ({ params }) => {
   const bookData = {
     title: "Think and Grow Rich",

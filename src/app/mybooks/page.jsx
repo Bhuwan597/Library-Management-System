@@ -1,6 +1,5 @@
 import React from "react";
-import MyBooksTable from "../components/MyBooksTable";
-
+import MyBooksTable from "@/components/MyBooksTable";
 const MyBooksPage = () => {
   return (
     <>

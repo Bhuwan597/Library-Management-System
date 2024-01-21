@@ -1,9 +1,8 @@
 import React from "react";
-import Footer from "../components/Footer";
 import {bookDatas} from '../data/BooksData';
-import BooksTabsAndSearchbar from "../components/partials/BooksTabsAndSearchbar";
-import Bookcard from "../components/partials/Bookcard";
-
+import Bookcard from "@/components/partials/Bookcard";
+import BooksTabsAndSearchbar from "@/components/partials/BooksTabsAndSearchbar";
+import Footer from "@/components/Footer";
 const BooksPage = async ({searchParams}) => {
     const searchQueries = await searchParams;
     const lowercaseSearch = searchQueries?.search?.toLowerCase();

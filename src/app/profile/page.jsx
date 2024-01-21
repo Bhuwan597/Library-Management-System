@@ -1,7 +1,6 @@
 
 import React from 'react';
-import ProfilePageForm from "@/app/components/forms/ProfilePageForm";
-
+import ProfilePageForm from "@/components/forms/ProfilePageForm";
 const ProfilePage = () => {
 
 

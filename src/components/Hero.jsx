@@ -2,10 +2,10 @@
 import React, {useEffect, useRef, useState} from "react";
 
 import {AiOutlineSearch} from "react-icons/ai";
-import {bookDatas} from './../data/BooksData';
 import {useRouter} from "next/navigation";
 import Link from "next/link";
 import {FaBook} from "react-icons/fa";
+import {bookDatas} from "@/app/data/BooksData";
 
 const Hero = () => {
         const router = useRouter();

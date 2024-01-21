@@ -1,8 +1,7 @@
 import React from 'react';
-import NoticeCard from "@/app/components/partials/NoticeCard";
 import {newsAndNotices} from "@/app/data/NewsAndNoticesData";
-import Footer from "@/app/components/Footer";
-
+import Footer from "@/components/Footer";
+import NoticeCard from "@/components/partials/NoticeCard";
 const NoticesPage = () => {
     return (
 
