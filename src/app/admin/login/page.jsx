@@ -80,7 +80,7 @@ const AdminLoginPage = () => {
                                             id="email"
                                             type="email"
                                             placeholder="Enter your email"
-                                            className="w-full rounded-lg  bg-transparent pr-10 outline-none focus:border-red-600 focus-visible:shadow-none"
+                                            className="w-full rounded-lg md:w-[75%] lg:w-[90%]   bg-transparent outline-none focus:border-red-600 focus-visible:shadow-none"
                                             endContent={<FaEnvelope
                                                 className="text-xl text-red-600 pointer-events-none flex-shrink-0"/>}
                                         />
@@ -103,7 +103,7 @@ const AdminLoginPage = () => {
                                             id="password"
                                             type={isVisible ? "text" : "password"}
                                             placeholder="Enter your password"
-                                            className="w-full rounded-lg  bg-transparent pr-10 outline-none focus:border-red-600 focus-visible:shadow-none"
+                                            className="w-full rounded-lg md:w-[75%] lg:w-[90%] bg-transparent outline-none focus:border-red-600 focus-visible:shadow-none"
                                             endContent={<button className="focus:outline-none" type="button"
                                                                 onClick={toggleVisibility}>
                                                 {isVisible ? (<FaEyeSlash
@@ -118,7 +118,7 @@ const AdminLoginPage = () => {
                                 <div className="mb-5">
                                     <Button
                                         type="submit"
-                                        className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                                        className="flex w-full md:w-[75%] lg:w-[90%] justify-center rounded-md bg-red-600 px-3 py-1.5  text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                                     >
                                         Sign in
                                     </Button>
