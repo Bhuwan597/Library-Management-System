@@ -129,7 +129,7 @@ const ProfilePageForm = () => {
                             ? "success"
                             : "default"
                 }
-                errorMessage={isInvalidPassword && "Password doesn't match"}
+                errorMessage={isInvalidPassword && "Password doesn't match" }
                 endContent={
                     <FaLock className="text-xl text-default-400 pointer-events-none flex-shrink-0"/>
                 }/>
