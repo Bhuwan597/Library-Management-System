@@ -142,7 +142,7 @@ const ProfilePageForm = () => {
             </form>
 
             {showModal && (
-                <Modal isOpen={showModal} onClose={handleCloseModal} size="lg">
+                <Modal isOpen={showModal} placement={"center"} onClose={handleCloseModal} size="lg">
                     <ModalContent>
                         <ModalHeader>
                             {successMessage ? 'Success' : 'Password Warning'}
