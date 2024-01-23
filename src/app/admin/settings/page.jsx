@@ -1,10 +1,15 @@
 import React from 'react';
+import Sidebar from "@/components/admin/Sidebar";
 
 const AdminSettingsPage = () => {
     return (
-        <div>
-            Setitngs
-        </div>
+        <>
+            <Sidebar/>
+            <div>
+                Settings
+            </div>
+        </>
+
     );
 };
 
