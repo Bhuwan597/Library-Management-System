@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [domLoaded, setDomLoaded] = useState(false)
   const sidebarRef = useRef();
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || !domLoaded) return;
     setDomLoaded(true);
     const handler = (e) => {
       if (!sidebarRef.current.contains(e.target)) {
