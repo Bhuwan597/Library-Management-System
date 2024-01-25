@@ -60,8 +60,8 @@ const Sidebar = () => {
                 </div>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin/dashboard"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
                   <span className="inline-flex justify-center items-center ml-4">
@@ -70,11 +70,11 @@ const Sidebar = () => {
                   <span className="ml-2 text-sm tracking-wide truncate">
                     Dashboard
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin/messages"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
                   <span className="inline-flex justify-center items-center ml-4">
@@ -86,11 +86,11 @@ const Sidebar = () => {
                   <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-indigo-500 bg-indigo-50 rounded-full">
                     New
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin/books"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
                   <span className="inline-flex justify-center items-center ml-4">
@@ -102,7 +102,7 @@ const Sidebar = () => {
                   <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">
                     1.2k
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="px-5">
                 <div className="flex flex-row items-center h-8">
@@ -112,8 +112,8 @@ const Sidebar = () => {
                 </div>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin/assignbooks"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
                   <span className="inline-flex justify-center items-center ml-4">
@@ -122,11 +122,11 @@ const Sidebar = () => {
                   <span className="ml-2 text-sm tracking-wide truncate">
                     Assign Books
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin/users"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
                   <span className="inline-flex justify-center items-center ml-4">
@@ -138,7 +138,7 @@ const Sidebar = () => {
                   <span className="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">
                     15
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="px-5">
                 <div className="flex flex-row items-center h-8">
@@ -174,7 +174,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
                 >
@@ -184,7 +184,7 @@ const Sidebar = () => {
                   <span className="ml-2 text-sm tracking-wide truncate">
                     Logout
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
