@@ -117,7 +117,7 @@ const UserTable = () => {
                     </ModalContent>
                 </Modal>
 
-                <Table className="min-w-full bg-white border border-gray-300">
+                <Table className="min-w-full bg-white border border-gray-300 -z-50">
                     <TableHeader className="bg-gray-100">
                         <TableColumn className=" text-lg font-semibold text-center">
                             Users
